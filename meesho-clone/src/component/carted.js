@@ -20,9 +20,9 @@ export const Carted = (props) => {
   return (
     <>
       <div className="Carted">
+        <p>{props.id}</p>
         <img src={props.img} alt="" />
         <p>{props.brand}</p>
-        <p>{props.categories}</p>
         <p>{props.price}</p>
         <p>{props.discount}</p>
         <input type="text" value={quantity} />
@@ -37,7 +37,7 @@ export const Carted = (props) => {
 export const TOTAL = () => {
   var sum = 0;
   for (let i = 0; i < total.length; i++) {
-    if (i % 2 === 0) {
+    if (i % 2 === 1) {
       sum += total[i];
     }
   }

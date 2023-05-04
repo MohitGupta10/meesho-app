@@ -1,6 +1,10 @@
 import "./card.css";
 import { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
+import Rating from "@mui/material/Rating";
+// import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import { purple } from "@mui/material/colors";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
@@ -9,8 +13,11 @@ export const Card = () => {
   const [data, setData] = useState([]);
   const [sorting, setSorting] = useState("1");
   useEffect(() => {
-    axios.get("https://dummyjson.com/products").then((res) => {
-      setData(res.data.products);
+    axios.get("http://localhost:5555/productlist").then((res) => {
+      // setData(res.data.products);
+      // console.log(res.data);
+      setData(res.data);
+      // console.log(data[0]);
     });
   }, []);
   const handelChange = (e) => {
@@ -19,6 +26,7 @@ export const Card = () => {
   const addtocart = (data) => {
     // setAddcart(addcart + 1);
     cart.push(data);
+    // console.log(cart);
     localStorage.setItem("items", JSON.stringify(cart));
     toast("item to cart susscessfully", {
       position: "top-right",
@@ -39,15 +47,16 @@ export const Card = () => {
     } else if (sorting === "3") {
       return b.rating - a.rating;
     } else if (sorting === "4") {
-      return b.discountPercentage - a.discountPercentage;
+      return b.discount - a.discount;
     }
   });
-  const styles = {
-    width: 100,
-    marginTop: "15px",
-    color: "blue",
-    height: 30,
-  };
+  const ColorButton = styled(Button)(({ theme }) => ({
+    color: theme.palette.getContrastText(purple[500]),
+    backgroundColor: purple[500],
+    "&:hover": {
+      backgroundColor: purple[700],
+    },
+  }));
   return (
     <>
       <div className="Card1">
@@ -244,23 +253,20 @@ export const Card = () => {
               <>
                 <div className="card7part2">
                   <ul className="cardlist">
-                    <li className="list">ID:{item.id}</li>
                     <li className="list">
-                      <img className="imgTag" src={item.images[0]} />
+                      <img className="imgTag" src={item.imageurl} />
                     </li>
+                    <li className="list">ID:{item.id}</li>
                     <li className="list">Price:{item.price}</li>
                     <li className="list">Brand:{item.brand}</li>
-                    <li className="list">Discount:{item.discountPercentage}</li>
-                    <li className="list">Rating:{item.rating}</li>
-                    <li className="list">Categories:{item.category}</li>
+                    <li className="list">Discount:{item.discount}</li>
                     <li className="list">
-                      <button
-                        onClick={() => {
+                      <Rating name="no-value" value={item.rating} />
+                    </li>
+                    <li className="list">
+                    <ColorButton  onClick={() => {
                           addtocart(item);
-                        }}
-                      >
-                        Addtocart
-                      </button>
+                        }} variant="contained">Addtocart</ColorButton>
                       <ToastContainer
                         position="top-right"
                         autoClose={5000}
@@ -273,6 +279,7 @@ export const Card = () => {
                         pauseOnHover
                         theme="light"
                       />
+                      
                     </li>
                   </ul>
                 </div>

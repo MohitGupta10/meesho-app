@@ -2,6 +2,8 @@
 import { Carted } from "../carted";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { TOTAL } from "../carted";
 import "./cart.css";
 export const CartPage = () => {
@@ -26,7 +28,7 @@ export const CartPage = () => {
   const remove = (index) => {
     // console.log(item);
     const deleted = [...carted].filter((cardItems, e) => e !== index);
-    console.log(deleted);
+    // console.log(deleted);
     setCarted(deleted);
     localStorage.setItem("items", JSON.stringify(deleted));
     window.location.reload(true);
@@ -54,11 +56,12 @@ export const CartPage = () => {
                 <div className="carted-main1">
                   <div className="carted-data">
                     <Carted
+                      id={item.id}
                       brand={item.brand}
-                      img={item.images[0]}
-                      categories={item.category}
+                      img={item.imageurl}
                       price={item.price}
-                      discount={item.discountPercentage}
+                      discount={item.discount}
+                      rating={item.rating}
                     />
                     <div className="carted-button">
                       <button onClick={() => remove(index)}>Remove</button>
@@ -70,7 +73,9 @@ export const CartPage = () => {
           })}
 
           <TOTAL />
-          <button onClick={pay}>Pay</button>
+          <Button variant="outlined" startIcon={<DeleteIcon />} onClick={pay}>
+            Remove
+          </Button>
         </div>
       )}
     </>
