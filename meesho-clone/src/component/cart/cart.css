@@ -1,0 +1,98 @@
+.cart-input{
+    width:40px
+}
+.Carted{
+  display:flex;
+  flex-direction: column;
+  width:60%;
+  /* border: 1px solid red; */
+  background-color: aqua;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5px;
+  /* align-items: center; */
+}
+.Carted>img{
+    width:100px;
+    /* border: 1px solid blue; */
+    height: 70%;
+    margin: auto;
+    margin-top: 15px;
+   
+}
+.Carted>input{
+    width: 50px;
+    height: 10px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+.Carted>p{
+    text-align: center;
+    /* border: 1px solid blue; */
+    width:90px;
+    padding: 0%;
+    margin:auto;
+    align-items: center;
+}
+.Carted>button{
+    margin: auto;
+    border: 1px solid red;
+}
+.carted-data{
+    width:80%;
+    margin: auto;
+    /* border: 1px solid blue; */
+}
+.carted-button>button{
+  /* border: 1px solid red; */
+  /* text-align: center; */
+  font-size: 15px;
+  background-color: aqua;
+ margin-left: 40%;
+  /* border:0px */
+}
+.carted-button{
+    /* border: 1px solid teal; */
+    margin: auto;
+    width:70%
+    /* background-color: aqua; */
+}
+.carted-main1{
+    /* border: 1px solid blue; */
+    display: flex;
+}
+.Carted:hover{
+    border-bottom: 3px solid blue;
+    box-shadow:5px 10px #888888;
+}
+.carted-main>button{
+font-size: 24px;
+ font-family: ‘Open Sans’;
+ font-weight: 600;
+ color: #E44C4C;
+ cursor: pointer;
+ border-bottom: 1px solid #E44C4C;
+ padding: 10px;
+ margin-left: 5px;
+}
+.empty{
+    width:50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.empty>button{
+    color:#F43397;
+    padding: 10px;
+}
+.empty>button:hover{
+    cursor: pointer;
+}
+h1{
+    font-size: 20px;
+    font-family: ‘Open Sans’;
+    font-weight: 700;
+    color: #2F3841;
+}
