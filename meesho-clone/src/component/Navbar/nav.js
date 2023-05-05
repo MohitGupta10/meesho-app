@@ -7,21 +7,13 @@ import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantity
 // import { DebounceInput } from "react-debounce-input";
 import { useState } from "react";
 export const Navbar = () => {
-  const [showlist, setShowlist] = useState(false);
+  const [list, setShow] = useState(false);
   const [profile, setProfile] = useState(false);
   const [icon, setIcon] = useState(false);
   const [value, setValue] = useState("");
-  const handleMouseOver = () => {
-    setShowlist(true);
-  };
-  const handleMouseOut = () => {
-    setShowlist(false);
-  };
-  const handleMouseOverDIV = () => {
-    setProfile(true);
-  };
-  const handleMouseOutDIV = () => {
-    setProfile(false);
+  const handleMouseOver = (event) => {
+    event === "over" ? setShow(true) : setShow(false);
+    event === "profile-over" ? setProfile(true) : setProfile(false);
   };
   const handelClick = () => {
     setIcon(!icon);
@@ -48,6 +40,7 @@ export const Navbar = () => {
               type="text"
               placeholder="Try Saree And kurti or Serach by product code "
               onChange={handelchange}
+              value={value}
             />
             {/* <DebounceInput
               className="inputtag"
@@ -69,8 +62,8 @@ export const Navbar = () => {
             <PermIdentityIcon className="profile-img1" />
 
             <div
-              onMouseOver={handleMouseOverDIV}
-              onMouseOut={handleMouseOutDIV}
+              onMouseOver={() => handleMouseOver("profile-over")}
+              onMouseOut={() => handleMouseOver("profile-out")}
             >
               Profile
               {profile && (
@@ -126,12 +119,12 @@ export const Navbar = () => {
         <div className="item">
           <ul className="item-list">
             <li
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
+              onMouseOver={() => handleMouseOver("over")}
+              onMouseOut={() => handleMouseOver("out")}
               className="item-list1"
             >
               Women Ethnic
-              {showlist && (
+              {list && (
                 <div className="showlisthover">
                   <div className="womenEthnic-list">
                     <h2>

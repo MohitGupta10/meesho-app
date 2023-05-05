@@ -16,13 +16,11 @@ export const CartPage = () => {
     }
   }, []);
   const pay = () => {
-    if (window.confirm("Are you sure you wish to delete this item?")) {
-      alert("item is remove");
+    if (window.confirm("item success fully done")) {
+      alert("item success fully book ");
       localStorage.removeItem("items");
       window.location.reload(true);
       navigate("/");
-    } else {
-      navigate("/cart");
     }
   };
   const remove = (index) => {
@@ -74,7 +72,7 @@ export const CartPage = () => {
 
           <TOTAL />
           <Button variant="outlined" startIcon={<DeleteIcon />} onClick={pay}>
-            Remove
+            Payment
           </Button>
         </div>
       )}

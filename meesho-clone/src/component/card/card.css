@@ -317,7 +317,8 @@
     display:grid;
     grid-template-columns: auto auto auto;
     width: 80%;
-    margin:10px 0px
+    margin:10px 0px;
+    gap:5px
  }
  .card7part2{
     width: 100%;

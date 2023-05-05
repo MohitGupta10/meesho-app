@@ -22,9 +22,9 @@ export const Carted = (props) => {
       <div className="Carted">
         <p>{props.id}</p>
         <img src={props.img} alt="" />
-        <p>{props.brand}</p>
-        <p>{props.price}</p>
-        <p>{props.discount}</p>
+        <p>Brand:{props.brand}</p>
+        <p>Price:{props.price}</p>
+        <p>Discount:{props.discount}%</p>
         <input type="text" value={quantity} />
         <button onClick={Add}>+</button>
         <button onClick={Sub}>-</button>

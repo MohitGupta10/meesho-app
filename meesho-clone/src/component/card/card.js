@@ -259,14 +259,19 @@ export const Card = () => {
                     <li className="list">ID:{item.id}</li>
                     <li className="list">Price:{item.price}</li>
                     <li className="list">Brand:{item.brand}</li>
-                    <li className="list">Discount:{item.discount}</li>
+                    <li className="list">Discount:{item.discount}%</li>
                     <li className="list">
                       <Rating name="no-value" value={item.rating} />
                     </li>
                     <li className="list">
-                    <ColorButton  onClick={() => {
+                      <ColorButton
+                        onClick={() => {
                           addtocart(item);
-                        }} variant="contained">Addtocart</ColorButton>
+                        }}
+                        variant="contained"
+                      >
+                        Addtocart
+                      </ColorButton>
                       <ToastContainer
                         position="top-right"
                         autoClose={5000}
@@ -279,7 +284,6 @@ export const Card = () => {
                         pauseOnHover
                         theme="light"
                       />
-                      
                     </li>
                   </ul>
                 </div>

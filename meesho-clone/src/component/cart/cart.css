@@ -4,9 +4,21 @@
 .Carted{
   display:flex;
   flex-direction: column;
-  width:60%;
   /* border: 1px solid red; */
-  background-color: aqua;
+  width: 50%;
+  border: 1px solid blue;
+  margin:15px;
+  text-align: center;
+  float: center;
+  box-sizing: border-box;
+  border-radius: 20px;
+  cursor: pointer;
+  padding-top:10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
+  transition: .4s;
+  background-color: #f2f2f2;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
   border-radius: 20px;
   margin: auto;
   margin-top: 5px;
@@ -46,11 +58,15 @@
 }
 .carted-button>button{
   /* border: 1px solid red; */
-  /* text-align: center; */
+  text-align: center;
+  float: center;
   font-size: 15px;
-  background-color: aqua;
+  background-color:#f2f2f2;
  margin-left: 40%;
-  /* border:0px */
+ /* margin: auto; */
+ cursor: pointer;
+ padding: 10px;
+ width:20%;
 }
 .carted-button{
     /* border: 1px solid teal; */
@@ -63,8 +79,8 @@
     display: flex;
 }
 .Carted:hover{
-    border-bottom: 3px solid blue;
-    box-shadow:5px 10px #888888;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px,-8px);
 }
 .carted-main>button{
 font-size: 24px;
@@ -72,7 +88,7 @@ font-size: 24px;
  font-weight: 600;
  color: #E44C4C;
  cursor: pointer;
- border-bottom: 1px solid #E44C4C;
+ /* border-bottom: 1px solid #E44C4C; */
  padding: 10px;
  margin-left: 5px;
 }

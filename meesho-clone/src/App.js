@@ -1,7 +1,7 @@
 import "./App.css";
-import { Navbar } from "../src/component/Navbar/nav";
-import { Card } from "../src/component/card/card";
-import { Footer } from "../src/component/footer/footer";
+// import { Navbar } from "../src/component/Navbar/nav";
+// import { Card } from "../src/component/card/card";
+// import { Footer } from "../src/component/footer/footer";
 import { Supplier } from "../src/component/supplier/supplier";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "../src/component/Home/home";
