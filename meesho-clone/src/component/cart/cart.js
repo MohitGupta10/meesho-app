@@ -1,43 +1,35 @@
 // import { useLocation } from "react-router-dom";
 import { Carted } from "../carted";
-import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// import { useState } from "react";
+import { removeItem, clearItem } from "../../features/cartslice";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { TOTAL } from "../carted";
 import "./cart.css";
+// import { Button } from "@mui/material";
 export const CartPage = () => {
-  const [carted, setCarted] = useState([]);
+  let dispatch = useDispatch();
+  let items = useSelector((state) => state.cart.cartSlice.items);
   const navigate = useNavigate();
-  useEffect(() => {
-    const cart = JSON.parse(localStorage.getItem("items"));
-    if (cart) {
-      setCarted(cart);
-    }
-  }, []);
-  const pay = () => {
-    if (window.confirm("item success fully done")) {
-      alert("item success fully book ");
-      localStorage.removeItem("items");
-      window.location.reload(true);
-      navigate("/");
-    }
-  };
-  const remove = (index) => {
-    // console.log(item);
-    const deleted = [...carted].filter((cardItems, e) => e !== index);
-    // console.log(deleted);
-    setCarted(deleted);
-    localStorage.setItem("items", JSON.stringify(deleted));
-    window.location.reload(true);
-  };
+  // const remove = (item) => {
+  //   dispatch(removeItem(item));
+  // };
   const viewProduct = () => {
     navigate("/");
+    window.location.reload(true);
+  };
+  const addMore = () => {
+    navigate("/");
+  };
+  const cleardata = () => {
+    dispatch(clearItem());
   };
   return (
     <>
       <h1>SHOPING CART </h1>
-      {carted.length === 0 ? (
+      {items.length === 0 ? (
         <div className="empty">
           <img
             src="https://images.meesho.com/images/pow/empty-cart.png"
@@ -48,11 +40,12 @@ export const CartPage = () => {
         </div>
       ) : (
         <div className="carted-main">
-          {carted.map((item, index) => {
+          <button onClick={addMore}>Add moreProduct</button>
+          {items.map((item, index) => {
             return (
               <>
                 <div className="carted-main1">
-                  <div className="carted-data">
+                  <div>
                     <Carted
                       id={item.id}
                       brand={item.brand}
@@ -60,20 +53,22 @@ export const CartPage = () => {
                       price={item.price}
                       discount={item.discount}
                       rating={item.rating}
+                      quantity={item.quantity}
+                      index={index}
                     />
-                    <div className="carted-button">
-                      <button onClick={() => remove(index)}>Remove</button>
-                    </div>
                   </div>
                 </div>
               </>
             );
           })}
 
-          <TOTAL />
-          <Button variant="outlined" startIcon={<DeleteIcon />} onClick={pay}>
-            Payment
-          </Button>
+          <div className="totals">
+            <Button onClick={cleardata}>
+              <DeleteIcon />
+              ClearDATA
+            </Button>
+            <TOTAL className="totalamount" />
+          </div>
         </div>
       )}
     </>

@@ -8,7 +8,6 @@ import { Home } from "../src/component/Home/home";
 import { Profile } from "./component/Profile/profile";
 import { Sell } from "./component/supplier/supplierList/sell/sell";
 import { CartPage } from "./component/cart/cart";
-
 function App() {
   return (
     <div className="App">

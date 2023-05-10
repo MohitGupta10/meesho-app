@@ -4,9 +4,14 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
+import { useSelector } from "react-redux";
+import Badge from "@mui/material/Badge";
 // import { DebounceInput } from "react-debounce-input";
 import { useState } from "react";
 export const Navbar = () => {
+  let count = useSelector((state) => state.cart.cartSlice.value);
+  let data = useSelector((state) => state.cart.productsSlice.data);
+  // console.log(data);
   const [list, setShow] = useState(false);
   const [profile, setProfile] = useState(false);
   const [icon, setIcon] = useState(false);
@@ -20,6 +25,11 @@ export const Navbar = () => {
   };
   const handelchange = (e) => {
     setValue(e.target.value);
+    data.filter((item) => {
+      if (value.toString == item.brand.toString) {
+        console.log(item.brand);
+      }
+    });
   };
   return (
     <>
@@ -33,8 +43,6 @@ export const Navbar = () => {
                 alt=""
               />
             </Link>
-          </div>
-          <div className="input-tag-div">
             <input
               className="inputtag"
               type="text"
@@ -42,12 +50,6 @@ export const Navbar = () => {
               onChange={handelchange}
               value={value}
             />
-            {/* <DebounceInput
-              className="inputtag"
-              minLength={2}
-              debounceTimeout={300}
-              onChange={(event) => setValue({ value: event.target.value })}
-            /> */}
           </div>
           <div className="download">
             <PhoneAndroidIcon className="img1" />
@@ -78,9 +80,11 @@ export const Navbar = () => {
           <div className="carted">
             <ProductionQuantityLimitsIcon className="carted-img1" />
             <br></br>
-            <Link className="Linktag" to="/cart">
-              Cart
-            </Link>
+            <Badge badgeContent={count} color="secondary">
+              <Link className="Linktag" to="/cart">
+                Cart
+              </Link>
+            </Badge>
           </div>
           <div className="format-icon" onClick={handelClick}>
             <FormatListBulletedIcon />

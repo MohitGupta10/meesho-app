@@ -2,6 +2,9 @@ import "./card.css";
 import { useState, useEffect } from "react";
 import Rating from "@mui/material/Rating";
 // import Stack from "@mui/material/Stack";
+import { useDispatch, useSelector } from "react-redux";
+import { addProducts, setLoading } from "../../features/cartslice";
+import { addItem } from "../../features/cartslice";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { purple } from "@mui/material/colors";
@@ -9,37 +12,35 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 export const Card = () => {
-  const cart = [];
-  const [data, setData] = useState([]);
+  let items = useSelector((state) => state.cart.productsSlice.data);
+  // console.log(items);
+  const dispatch = useDispatch();
+  // const items = useSelector(selectCartItems);
+  // console.log(items);
+  // const cart = [];
   const [sorting, setSorting] = useState("1");
   useEffect(() => {
+    dispatch(setLoading(true));
     axios.get("http://localhost:5555/productlist").then((res) => {
       // setData(res.data.products);
+      dispatch(addProducts(res.data));
+      dispatch(setLoading(false));
       // console.log(res.data);
-      setData(res.data);
+
       // console.log(data[0]);
     });
-  }, []);
+  }, [dispatch]);
   const handelChange = (e) => {
     setSorting(e.target.value);
   };
   const addtocart = (data) => {
-    // setAddcart(addcart + 1);
-    cart.push(data);
-    // console.log(cart);
-    localStorage.setItem("items", JSON.stringify(cart));
+    dispatch(addItem(data));
+
     toast("item to cart susscessfully", {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
+      position: "bottom-left",
     });
   };
-  const DataSorted = [...data].sort((a, b) => {
+  const DataSorted = [...items].sort((a, b) => {
     if (sorting === "1") {
       return b.price - a.price;
     } else if (sorting === "2") {
@@ -53,9 +54,6 @@ export const Card = () => {
   const ColorButton = styled(Button)(({ theme }) => ({
     color: theme.palette.getContrastText(purple[500]),
     backgroundColor: purple[500],
-    "&:hover": {
-      backgroundColor: purple[700],
-    },
   }));
   return (
     <>
@@ -67,7 +65,7 @@ export const Card = () => {
             <p>Cash On Delivery</p>
             <p>Easy to Return </p>
           </div>
-          <button>Download the Meesho App </button>
+          <button>Download the Meesho App</button>
         </div>
         <div className="card1-imgdiv">
           <img
@@ -189,7 +187,7 @@ export const Card = () => {
         </div>
       </div>
       <div>
-        <div>
+        <div className="Product-class">
           <h2>Product For you </h2>
         </div>
       </div>
@@ -272,18 +270,7 @@ export const Card = () => {
                       >
                         Addtocart
                       </ColorButton>
-                      <ToastContainer
-                        position="top-right"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="light"
-                      />
+                      <ToastContainer />
                     </li>
                   </ul>
                 </div>

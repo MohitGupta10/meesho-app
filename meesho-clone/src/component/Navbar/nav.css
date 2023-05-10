@@ -15,7 +15,7 @@
 }
 .nav{
     display: flex;
-    width:98%;
+    /* width:%; */
     /* border: 1px solid teal; */
     justify-content: space-evenly;
     /* margin: auto; */
@@ -33,7 +33,7 @@
 }
 .download:hover{
     cursor: pointer;
-    border-bottom: 3px solid rgb(244, 51,151);
+    /* border-bottom: 3px solid rgb(244, 51,151); */
     justify-content: center;
     /* align-items: center; */
     /* -webkit-box-align: center; */
@@ -43,9 +43,10 @@
 }
 .inputtag{
     /* border: 1px solid brown; */
-    padding: 15px;
-    width: 95%;
-    margin-top:7px ;
+    /* padding: 3px; */
+    width: 67%;
+    margin: auto;
+    height: 35px;
     /* height: 29%; */
     /* margin-right: 50px;
     padding-right: 5px; */
@@ -125,8 +126,11 @@
 }
 .meeshoicon{
      cursor: pointer;
+     display: flex;
      /* border: 1px solid red; */
      padding-top: 3px;
+     margin-left: 5px;
+     width: 40%;
      /* padding-bottom: 3px; */
      /* padding-left: 3px; */
      /* height: 90%; */
@@ -143,7 +147,8 @@
     display: flex;
     justify-content: space-between;
     /* height: 80%; */
-    width: 90%;
+    margin-left: 10px;
+    width: 93%;
     /* border: 1px solid red; */
 }
 .item >.item-list .item-list1{
@@ -151,6 +156,7 @@
     align-items: center;
     /* border: 1px solid blue; */
     /* height: 30%; */
+    /* margin-left: 5px; */
 }
 .item .item-list .item-list1:hover{
     border-bottom: 3px solid rgb(244, 51,151);
