@@ -1,4 +1,10 @@
 import "./card.css";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+// import Button from '@mui/material/Button';
+import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
 import Rating from "@mui/material/Rating";
 // import Stack from "@mui/material/Stack";
@@ -11,7 +17,8 @@ import { purple } from "@mui/material/colors";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-export const Card = () => {
+import { Box, Container } from "@mui/material";
+export const Cards = () => {
   let items = useSelector((state) => state.cart.productsSlice.data);
   // console.log(items);
   const dispatch = useDispatch();
@@ -178,7 +185,7 @@ export const Card = () => {
         </div>
       </div>
       <div className="card6">
-        <h4>Register as a Meesho Supplier</h4>
+        <h4 className="heading-Supplier">Register as a Meesho Supplier</h4>
         <p>Sell your products to crores of customers at 0% commision</p>
         <div className="card6-para">
           <p>Grow your bussiness 10x</p>
@@ -249,31 +256,41 @@ export const Card = () => {
           {DataSorted.map((item) => {
             return (
               <>
-                <div className="card7part2">
-                  <ul className="cardlist">
-                    <li className="list">
-                      <img className="imgTag" src={item.imageurl} />
-                    </li>
-                    <li className="list">ID:{item.id}</li>
-                    <li className="list">Price:{item.price}</li>
-                    <li className="list">Brand:{item.brand}</li>
-                    <li className="list">Discount:{item.discount}%</li>
-                    <li className="list">
-                      <Rating name="no-value" value={item.rating} />
-                    </li>
-                    <li className="list">
-                      <ColorButton
-                        onClick={() => {
-                          addtocart(item);
-                        }}
-                        variant="contained"
-                      >
-                        Addtocart
-                      </ColorButton>
-                      <ToastContainer />
-                    </li>
-                  </ul>
-                </div>
+                <Container>
+                  <Box sx={{ padding: 3 }}>
+                    <Card sx={{ maxWidth: 345 }}>
+                      <CardMedia sx={{ height: 140 }} image={item.imageurl} />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          ID:{item.id}
+                        </Typography>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Brand:{item.brand}
+                        </Typography>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Price:{item.price}
+                        </Typography>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Discount:{item.discount}
+                        </Typography>
+                        <Typography gutterBottom variant="h5" component="div">
+                          <Rating name="no-value" value={item.rating} />
+                        </Typography>
+                      </CardContent>
+                      <CardActions>
+                        <ColorButton
+                          onClick={() => {
+                            addtocart(item);
+                          }}
+                          variant="contained"
+                        >
+                          Addtocart
+                        </ColorButton>
+                        <ToastContainer/>
+                      </CardActions>
+                    </Card>
+                  </Box>
+                </Container>
               </>
             );
           })}

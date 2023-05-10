@@ -1,6 +1,6 @@
 import { Navbar } from "../Navbar/nav";
 
-import { Card } from "../card/card";
+import { Cards } from "../card/card";
 import { Footer } from "../footer/footer";
 // import { Profile } from "../Profile/profile"
 export const Home = () => {
@@ -8,7 +8,7 @@ export const Home = () => {
     <>
       <Navbar />
       {/* <Profile/> */}
-      <Card />
+      <Cards/>
       <Footer />
     </>
   );

@@ -28,7 +28,7 @@ export const Carted = (props) => {
         <p>Brand:{props.brand}</p>
         <p>Price:{props.price}</p>
         <p>Discount:{props.discount}%</p>
-        <p>{props.quantity}</p>
+        <p>QTY:{props.quantity}</p>
         <button onClick={() => Add(props)}>+</button>
         <button onClick={() => Sub(props)}>-</button>
         <button onClick={() => remove(props.index)}>Remove</button>

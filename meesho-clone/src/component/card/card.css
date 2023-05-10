@@ -266,22 +266,22 @@
     background-size: 99%;
     /* margin-left: 5%; */
     margin: auto;
-    margin-top: 5%;
-    height: 50vh;
+    /* margin-top: 5%; */
+    height: 60vh;
     
 }
-.card6 h4{
+.heading-Supplier{
+    margin-top:20px;
+    text-align: center;
     color:white;
-    font-size: 30px;
-    margin-left: 5%;
-    margin-top: 5%;
-    /* border: 1px solid red; */
-    width: 70%;
 }
 .card6>p{
     color: white;
-    margin-left: 20%;
+    margin-left: 10%;
     /* border: 1px solid red; */
+    margin-top: 5%;
+    width:70%;
+    font-size: 20px;
 }
 .card6-para{
     display: flex;
@@ -290,6 +290,7 @@
     /* border: 1px solid red; */
     line-height: 5%;
     justify-content: space-around;
+    margin-top: 8%;
 }
 .Product-class{
     margin-left:7% ;
@@ -318,11 +319,13 @@
 .card7part{
     /* border:1px solid blue; */
     display:grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto ;
     width: 100%;
     margin-left:5px;
     margin-top: 10px;
-    gap:2px
+    gap:2px;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
  }
  .card7part2{
     width: 90%;
@@ -372,12 +375,12 @@
     /* border: 1px solid red; */
 }
 .cardlist{
-    /* border:1px solid red; */
+    border:1px solid red;
     text-align: center;
     align-items: center;
-    float: right;
-    width:70%;
-    margin-right: 10%;
+    /* float: right; */
+    margin: auto;
+    width:80%;
 }
 .list{
     list-style: none;
