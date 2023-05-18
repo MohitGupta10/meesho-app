@@ -12,12 +12,12 @@ import { Profile } from "./component/Profile/profile";
 import { Sell } from "./component/supplier/supplierList/sell/sell";
 import { CartPage } from "./component/cart/cart";
 // import { Design } from "../src/component/Home/design";
-import { Calendar, Team} from "./component/Home/calender";
+import {Team} from "./component/Home/team";
 function App() {
   return (
     <div className="App">
       {/* <Design /> */}
-      <Calendar/>
+      <Team/>
       {/* <ThemeProvider theme={theme}>
         <Grid container>
              
