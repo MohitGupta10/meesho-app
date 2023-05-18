@@ -22,6 +22,7 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     
 }
 .calender-account>button{
+    border: none;
     border-radius: 20px;
     color:#FFFFFF;
     background-color:#0069FF;
@@ -41,6 +42,7 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     margin-top: 10px;
     width:95%;
     margin-left:20px;
+    height: 70px;
     border-radius: 10px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
     margin-bottom: 15px;
@@ -48,34 +50,39 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 .calender-delete{
     width:20px;
     /* border: 1px solid pink; */
-    margin-top: 15px;
+    margin-top: 30px;
     margin-right: 15px;
+    margin-bottom: 5px;
 }
 .calender-date{
     display: flex;
     flex-direction: row;
     /* border: 1px solid blue; */
+    margin-top: 10px;
     margin-left: 10px;
+    margin-bottom: 5px;
 }
 .calender-image{
     width:30px;
-    margin-right: 5px;
+    margin-right: 15px;
     margin-top: 10px;
 
 }
-.heading{
-    font-size: medium;
+.calender-heading{
+    font-size: 15px;
     margin-top: 5px;
+    /* border:1px solid red; */
 }
-p{
+.calender-ptag{
     /* display: block; */
     font-size: 10px;
     line-height: 15px;
+    font-weight: normal;
     /* border: 1px solid teal; */
     margin: 0px;
     padding: 0px;
 }
-hr{
+.calender-hr{
     margin-top: 2em;
     margin-bottom: 0.5em;
     margin-left: auto;
@@ -117,8 +124,12 @@ hr{
      margin-right: 10px;
      margin-bottom: 10px;
 }
-.circle{
+.calender-circle{
     width:10px;
+    margin-left: 5px;
+    /* border:1px solid whitesmoke; */
+    border-radius: 50%;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 .calender-check{
     display: flex;
@@ -126,27 +137,27 @@ hr{
     margin-top: 10px;
 
 }
-.heading1{
+.calender-heading1{
     font-size: 15px;
     margin-left: 20px;
     /* border: 1px solid red; */
     margin-top: 15px;
 }
-.heading2{
+.calender-heading2{
     font-size:13px;
     font-weight: bold;
     margin-top: 5px;
     /* border: 1px solid red; */
 }
-.heading3{
+.calender-heading3{
     font-size: 12px;
     margin-top: 8px;
     margin-left: 5px;
 }
-li{
+.calender-li{
     font-size: 10px;
 }
-.edit{
+.calender-edit-btn{
     border: none;
     color:#0069FF;
     background: none;

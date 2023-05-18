@@ -4,12 +4,12 @@ export const Calendar = () => {
     <>
       <div className="calender-container">
         <div className="calender-account">
-          <h4 className="heading">My Calendar Account 1/6</h4>
+          <h4 className="calender-heading">My Calendar Account 1/6</h4>
           <button>
             <span className="calender-button-span">+</span> Add Calendar Account
           </button>
         </div>
-        <hr></hr>
+        <hr className="calender-hr"></hr>
         <div className="calender-contain">
           <div className="calender-date">
             <div>
@@ -20,8 +20,8 @@ export const Calendar = () => {
               />
             </div>
             <div>
-              <h4 className="heading">Google</h4>
-              <p>rohit@samyotech.com</p>
+              <h4 className="calender-heading">Google</h4>
+              <p className="calender-ptag">rohit@samyotech.com</p>
             </div>
           </div>
           <div>
@@ -35,9 +35,9 @@ export const Calendar = () => {
       </div>
       <div className="calender-configrution">
         <div>
-          <h4 className="heading1">Configuration</h4>
+          <h4 className="calender-heading1">Configuration</h4>
           <div>
-            <hr></hr>
+            <hr className="calender-hr"></hr>
             <div className="calender-box">
               <div className="calender-conflicts">
                 <div>
@@ -47,30 +47,35 @@ export const Calendar = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="heading2">Check for conflicts</h4>
-                  <p>
-                    Set the calender(s) to check for conflicts to prevent double
-                    <br></br>bookings.
-                  </p>
+                  <h4 className="calender-heading2">
+                    Check for conflicts
+                    <p className="calender-ptag">
+                      Set the calender(s) to check for conflicts to prevent
+                      double
+                      <br></br>bookings.
+                    </p>
+                  </h4>
                 </div>
               </div>
               <div>
                 <div className="calender-edit">
                   <div className="calender-check">
-                    <div>
+                    <div className="calender-image-circle">
                       <img
-                        className="circle"
-                        src="https://cdn-icons-png.flaticon.com/128/3515/3515278.png"
+                        className="calender-circle"
+                        src="https://img.icons8.com/?size=512&id=IswN8Ngg8ciB&format=png"
                       />
                     </div>
                     <div>
-                      <h4 className="heading3">Check rohit@samyotech.com</h4>
-                      <ul>
-                        <li>rohit@samyotech.com</li>
-                      </ul>
+                      <h4 className="calender-heading3">
+                        Check rohit@samyotech.com
+                        <ul>
+                          <li className="calender-li">rohit@samyotech.com</li>
+                        </ul>
+                      </h4>
                     </div>
                   </div>
-                  <button className="edit">Edit</button>
+                  <button className="calender-edit-btn">Edit</button>
                 </div>
               </div>
             </div>
@@ -83,11 +88,14 @@ export const Calendar = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="heading2">Check for conflicts</h4>
-                  <p>
-                    Set the calender(s) to check for conflicts to prevent double
-                    <br></br>bookings.
-                  </p>
+                  <h4 className="calender-heading2">
+                    Check for conflicts
+                    <p className="calender-ptag">
+                      Set the calender(s) to check for conflicts to prevent
+                      double
+                      <br></br>bookings.
+                    </p>
+                  </h4>
                 </div>
               </div>
               <div>
@@ -95,18 +103,20 @@ export const Calendar = () => {
                   <div className="calender-check">
                     <div>
                       <img
-                        className="circle"
-                        src="https://cdn-icons-png.flaticon.com/128/3515/3515278.png"
+                        className="calender-circle"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV7So9M0IeawKWRm9eM2ZmCKq-gUOggxY9PA&usqp=CAU"
                       />
                     </div>
                     <div>
-                      <h4 className="heading3">Check rohit@samyotech.com</h4>
-                      <ul>
-                        <li>rohit@samyotech.com</li>
-                      </ul>
+                      <h4 className="calender-heading3">
+                        Check rohit@samyotech.com
+                        <ul>
+                          <li className="calender-li">rohit@samyotech.com</li>
+                        </ul>
+                      </h4>
                     </div>
                   </div>
-                  <button className="edit">Edit</button>
+                  <button className="calender-edit-btn">Edit</button>
                 </div>
               </div>
             </div>
