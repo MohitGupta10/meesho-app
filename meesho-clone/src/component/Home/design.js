@@ -2,7 +2,6 @@ import RoomIcon from "@mui/icons-material/Room";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import PublicIcon from "@mui/icons-material/Public";
 import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
-import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 export const Design = () => {
   return (
     <>

@@ -11,11 +11,13 @@ import { Home } from "../src/component/Home/home";
 import { Profile } from "./component/Profile/profile";
 import { Sell } from "./component/supplier/supplierList/sell/sell";
 import { CartPage } from "./component/cart/cart";
-import { Design } from "../src/component/Home/design";
+// import { Design } from "../src/component/Home/design";
+import { Calendar, Team} from "./component/Home/calender";
 function App() {
   return (
     <div className="App">
-      <Design />
+      {/* <Design /> */}
+      <Calendar/>
       {/* <ThemeProvider theme={theme}>
         <Grid container>
              

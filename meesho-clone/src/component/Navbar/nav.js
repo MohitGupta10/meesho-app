@@ -48,9 +48,16 @@ export const Navbar = () => {
   return (
     <>
       <Container
-        sx={{ position: "fixed", boxShadow: "1px 1px #888888",zIndex:"2",paddingLeft:1,top:0,background:""}}
+        sx={{
+          position: "fixed",
+          boxShadow: "1px 1px #888888",
+          zIndex: "2",
+          paddingLeft: 1,
+          top: 0,
+          backgroundColor: "white",
+        }}
       >
-        <Box className="nav">
+        <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
           <div className="meeshoicon">
             <Link to="/">
               <img

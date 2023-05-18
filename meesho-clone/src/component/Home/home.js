@@ -10,7 +10,7 @@ export const Home = () => {
     <>
       {/* <ButtonAppBar/> */}
       {/* <Design/> */}
-      <Container sx={{border:1}}>
+      <Container >
         <Navbar />
         <Cards />
         <Footer />
