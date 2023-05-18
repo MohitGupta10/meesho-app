@@ -7,6 +7,7 @@ const productsSlice = createSlice({
     data: [],
     isLoading: false,
     error: null,
+    serach: [],
   },
   reducers: {
     addProducts: (state, action) => {
@@ -17,6 +18,9 @@ const productsSlice = createSlice({
     },
     setError: (state, action) => {
       state.error = action.payload;
+    },
+    setserachItem: (state, action) => {
+       state.serach=action.payload
     },
   },
 });
@@ -41,6 +45,7 @@ const cartSlice = createSlice({
 
     clearItem: (state, action) => {
       state.items = [];
+      state.value = 0;
     },
     decrease: (state, action) => {
       const itemIndex = state.items.findIndex(
@@ -68,7 +73,8 @@ const cartSlice = createSlice({
 //     decrement: (state) => state - 1,
 //   },
 // });
-export const { addProducts, setLoading, setError } = productsSlice.actions;
+export const { addProducts, setLoading, setError, setserachItem } =
+  productsSlice.actions;
 export const { addItem, removeItem, clearItem, decrease, increase } =
   cartSlice.actions;
 // export const { increment, decrement } = counterSlice.actions;

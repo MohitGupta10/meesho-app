@@ -25,7 +25,7 @@
 }
 .Carted>img{
     width:50px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 40%;
     margin: auto;
     margin-top: 15px;
@@ -48,7 +48,7 @@
 }
 .Carted>button{
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 /* .carted-data{
     width:100%;
@@ -58,7 +58,7 @@
     justify-content: space-between;
 } */
 .carted-button>button{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   text-align: center;
   float: center;
   font-size: 15px;
@@ -71,7 +71,7 @@
  width:95%;
 }
 .carted-button{
-    border: 1px solid teal;
+    /* border: 1px solid teal; */
     margin: auto;
     margin-left: 5px;
     width:20%;
@@ -121,17 +121,21 @@ h1{
 }
 .totals{
     display: flex;
+    color:#E44C4C;
+    justify-content: space-between;
+    /* border:1px solid red */
 }
 .total-amount{
     border: 1px solid red;
-    margin-left: 59%;
+    
     margin-top: 10px;
 }
 .totals>Button{
     border:1px solid blue;
-    width:20%;
+    width:60%;
     margin-top:10px;
     font-size: 20px;
     text-align: start;
     margin-left:2%;
+    color:red
 }

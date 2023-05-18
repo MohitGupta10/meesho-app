@@ -1,119 +1,55 @@
-.Card1{
-    display: flex;
-    /* border: 1px solid red; */
-    /* flex-wrap: wrap; */
-    max-width:80%;
-    min-height:100%;
-    margin: auto;
-    /* justify-content: center; */
-    margin-top: 13%;
-    /* padding-top: 50px; */
-}
-.card1-Lowest{
-    /* border: 1px solid blue; */
-    width:45%;
-}
-.card1-listed{
+.card1{
     display:flex;
-}
-.card1-imgdiv{
-    /* border: 1px solid teal; */
-    margin-left: 10px;
-    width: 55%;
-    margin-top: 40px;
-}
-.card1-image{
-    width:65%;
-    /* border: 1px solid red; */
-    margin-top: 9%;
-    margin-left:2%;
-}
-
-
-.card1-Lowest>h1{
-    font-size: 45px;
-    /* border: 1px solid red; */
-}
-.card1-Lowest>button{
-    background:rgb(244, 51,151);
-    width: 95%;
-    padding: 15px;
-    color:rgb(255,255,255);
-    font-size: 20px;
-    margin-top:15%;
-}
-.heading-tag{
+    /* height: 70%; */
+    height: 300px;
+    width: 90%;
+    /* border:1px solid green; */
+    /* height: 40%; */
     margin: auto;
-    text-align: center;
-    font-size: 20px;
-    /* border: 1px solid red; */
+    justify-content:space-evenly;
+    background-color:rgb(249,249,249);
+    /* margin: auto; */
 }
-.card2{
-    width:80%;
-    margin: auto;
-    height: 100vh;
-    background-image:url("https://images.meesho.com/images/marketing/1678691670429.jpg");
-    margin-top:12%;
-    background-size:99%;
-    background-repeat: no-repeat;
-    /* border: 1px solid red; */
-}
-.card2item1{
-    /* border: 1px solid blue; */
+/* .card2item1{
+    border: 1px solid blue;
     display: flex;
     width:95%;
 }
 .card2img1{
-    /* border: 1px solid brown ; */
+    border: 1px solid brown ;
     margin-top:5%;
-    /* height: 70%; */
+    height: 70%;
     width: 40%;
     margin-left:2% ;
 }
 .card2-image{
     width:95%;
-    /* border:1px solid blue; */
+    border:1px solid blue;
     margin-top: 2%;
 
 }
 .card2img{
     display: flex;
-    /* border: 1px solid brown; */
+    border: 1px solid brown;
     margin-top:20%;
     padding-top: 10px;
     margin-left:25%;
     width:70%;
-    /* height: 80%; */
+    height: 80%;
 }
 .card2-image2{
      width:90%;
-     /* height: 80%; */
+     height: 80%;
      margin-top: 10%;
-     /* border: 1px solid red; */
-}
-.card3{
-    /* border:1px solid red; */
-    width:80%;
-    height: 100vh;
-    /* height: 80vh; */
-    /* background-position: right top; */
-    background-repeat: no-repeat;
-    background-size:99%;
-    display: flex;
-    background-image: url("https://images.meesho.com/images/marketing/1678691743015.jpg");
-    /* height: 400px; */
-    margin: auto;
-    margin-top:10%;
-    /* border: 1px solid red; */
-   
-    /* padding: 5px; */
-}
-.card3-btn{
+     border: 1px solid red;
+} */
+
+/* .card3-btn{
     width:30%;
     margin-top: 20%;
-    /* border: 1px solid blueviolet; */
-}
-.card3-btn>button{
+    border: 1px solid blueviolet;
+} */
+/* .card3-btn>button{
     align-items: center;
     margin-left:30%;
     padding:20px;
@@ -123,63 +59,64 @@
     color: rgb(255,255,255);
     font-family:"Helvetica Neue", sans-serif, "Mier Book";
     width:50%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     cursor: pointer; 
-}
-.card3-image{
+} */
+/* .card3-image{
     display: flex;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin-top: 5%;
     margin-left: 5%;
     width:55%;
-}
-.card3-image-1{
-    /* border:1px solid brown; */
+} */
+/* .card3-image-1{
+    border:1px solid brown;
     width:32%;
-    /* height: 80%; */
+    height: 80%;
     margin-left:2%;
     margin-top: 15%;
-}
-.card3-image-1>button{
+} */
+/* .card3-image-1>button{
     background-color: black;
     color: rgb(255,255,255);
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin: auto;
     padding:2%;
     margin-top: 5%;
     align-items: center;
     width: 75%;
     cursor: pointer;
-}
-.card3img{
+} */
+/* .card3img{
     width:70%;
     margin-top:5%;
     margin-left:2%;
-    /* height:70%; */
+    height:70%;
     cursor: pointer;
-    /* border: 1px solid red; */
-}
+    border: 1px solid red;
+} */
 .card4{
     /* border:1px solid red; */
-    width:80%;
-    height: 100vh;
+    width:90%;
+    height: 400px;
     background-repeat: no-repeat;
-    background-size:99%;
+    background-size:cover;
     display: flex;
     background-image: url("https://images.meesho.com/images/marketing/1678691892265.jpg");
+    justify-content: center;
     margin: auto;
-    margin-top:10%;
+    margin-top:5%;
     /* margin-left:5%; */
     /* padding: 10px; */
 
 }
-.card4-btn{
+/* .card4-btn{
     width:30%;
-    /* margin-top:5%; */
-    /* border: 1px solid red; */
-}
-.card4-btn>button{
-    /* border:1px solid red; */
+    margin-top:5%; 
+    border: 1px solid red;
+} */
+/* .card4-btn>button{
+    border:1px solid red;
     align-items: center;
     margin-left:30%;
     margin-top: 75%;
@@ -189,59 +126,52 @@
     color: rgb(255,255,255);
     font-family:"Helvetica Neue", sans-serif, "Mier Book";
     width:60%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     cursor: pointer;
-}
-.card4image{
+} */
+/* .card4image{
     display: flex;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width:65%;
-    /* margin-top:10% ; */
-}
-.card4imgtag{
-    /* border: 1px solid red; */
+    margin-top:10% ;
+} */
+/* .card4imgtag{
+    border: 1px solid red;
     width:80%;
-    /* height:50%; */
-}
+    height:50%;
+} */
 
-.card4-img-2{
-    /* border: 1px solid red; */
-    /* margin:auto; */
-    width:70%;
-    margin-top:55%;
-    align-items: center;
-    /* height: 40%; */
-    margin-left:5%
-}
 
-.card4imgtag>button{
+
+/* .card4imgtag>button{
     background-color: black;
     color: rgb(255,255,255);
-    /* border: 1px solid red; */
-    /* margin: auto; */
+    border: 1px solid red;
+    margin: auto;
     padding:2%;
     margin-top: 3%;
     align-items: center;
     width: 75%;
     cursor: pointer;
     margin-left: 5%;
-}
+} */
 .card5{
-    width:80%;
-    height: 50vh;
-    /* height: 80%; */
+    width:90%;
+    /* height: 50vh; */
+    height: 300px;
+    justify-content: center;
     background-repeat: no-repeat;
-    background-size:99%;
-    display: flex;
+    background-size:cover;;
+    /* display: flex; */
     background-image: url("https://images.meesho.com/images/pow/downloadBannerDesktop.webp");
     /* height: 400px; */
     margin: auto;
-    margin-top:5%;
+    /* margin-top:5%; */
     /* padding: 10px; */
     /* border:1px solid red; */
 }
-.card5-heading1{
-    /* border:1px solid red; */
+/* .card5-heading1{
+    border:1px solid red;
     margin-left: 15%;
     width:80%;
 }
@@ -249,36 +179,37 @@
      text-align: end;
      color:rgb(85, 133, 248);
      margin-right: 6%;
-}
-.card5-htag{
+} */
+/* .card5-htag{
    text-align: end;
    width: 90%;
    font-size: 50px;
    color:rgb(244, 51,151);
    margin-left: 5%;
-}
+} */
 .card6{
-    width:80%;
-    /* height: 140%; */
+    width:90%;
+    height: 200px;
     /* border: 1px solid red; */
+    justify-content: center;
     background-image: url("https://images.meesho.com/images/pow/supplyBannerDesktop.webp");
     background-repeat: no-repeat;
-    background-size: 99%;
+    background-size: cover;
     /* margin-left: 5%; */
     margin: auto;
-    /* margin-top: 5%; */
-    height: 60vh;
+    margin-top: 5%;
+    /* height: 60vh; */
     
 }
-.heading-Supplier{
+/* .heading-Supplier{
     margin-top:20px;
     text-align: center;
     color:white;
-}
-.card6>p{
+} */
+/* .card6>p{
     color: white;
     margin-left: 10%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin-top: 5%;
     width:70%;
     font-size: 20px;
@@ -287,144 +218,69 @@
     display: flex;
     color:white;
     margin-left:10%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     line-height: 5%;
     justify-content: space-around;
     margin-top: 8%;
-}
+} */
 .Product-class{
-    margin-left:7% ;
+    margin-left:5% ;
+    justify-content: center;
+    width:90%;
+    margin-top: 5%;
+
 }
-.para>p{
+/* .para>p{
     margin-left:2%;
-}
-.card7{
-    /* border:1px solid red; */
-    display: flex;
-    width:80%;
-    margin-left: 8%;
-    /* height: 50vh; */
-}
+} */
+
 .card7-options{
     /* border: 1px solid red; */
-    width: 25%;
+    width: 20%;
+    border-radius:20px ;
+    margin-top: 5px;
+    /* display: flex; */
+    /* margin-left:8%  */
+    /* position: sticky; */
 }
-.card7-select{
-    margin-left: 5px;
-    width: 60%;
-    /* height: 10%; */
-    /* border: 1px solid yellowgreen; */
-    margin-top: 5%;
-}
-.card7part{
-    /* border:1px solid blue; */
-    display:grid;
-    grid-template-columns: auto auto ;
-    width: 100%;
-    margin-left:5px;
-    margin-top: 10px;
-    gap:2px;
-    cursor: pointer;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
- }
- .card7part2{
-    width: 90%;
-    border: 1px solid blue;
-    justify-content: center;
-    margin-top: 15px;
-    margin-left:10px ;
-    text-align: center;
-    float: left;
-    box-sizing: border-box;
-    border-radius: 20px;
-    cursor: pointer;
-    padding-top:10px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22);
-    transition: .4s;
-    background-color: #f2f2f2;
-    /* display: grid; */
-    /* grid-template-areas: auto auto auto; */
-}
-.card7part2:hover{
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
-    transform: translate(0px,-8px);
-}
-.card7-image{
-    width:40%;
-    /* height: 40%; */
-    /* border: 1px solid red; */
-}
+
 .card7-imgdiv1{
     /* border:1px solid blue; */
     display: flex;
-    width:70%;
+    justify-content: space-between;
+    /* width:70%; */
     /* height:20%; */
 }
 .card7-imgdiv2{
     /* border: 1px solid red; */
-    margin-left: 18%;
+    margin-left: 15px;
+    /* display: none; */
 
-}
-
-
-
-.selecttag{
-    width: 100%;
-    /* height: 30px; */
-    /* height: 40%; */
-    /* border: 1px solid red; */
-}
-.cardlist{
-    border:1px solid red;
-    text-align: center;
-    align-items: center;
-    /* float: right; */
-    margin: auto;
-    width:80%;
-}
-.list{
-    list-style: none;
-    /* border: 1px solid blue; */
-    text-align: center;
-    /* align-items: center; */
-    margin-right:30px;
-    padding: 0px;
-}
-.list>button{
-    padding: 3px;
-    color: rgb(244, 51,151);
-    background-color:rgb(255,255,255);
-    cursor: pointer;
-}
-.list>button:active{
-    box-shadow: 2px 2px 5px #fc894d;
-}
-.imgTag{
-    width:60%;
-    height: 40%;
-    /* border: 1px solid red; */
-    /* height: 40px; */
-    display: block;
-    margin: 0 auto;
-    text-align: center;
 }
 .card7-imgdiv3{
    /* border:1px solid blue; */
     display: flex;
+    justify-content:space-between;
+    /* margin-left: 5px; */
 }
-
-@media screen and (max-width: 769px){
+.img-card-display{
+    border-radius: 10px;
+    color: transparent
+    /* background-image: linear-gradient(red, yellow); */
+    /* border-image: linear-gradient(#f6b73c, #4d9f0c) 30; */
+}
+/* @media screen and (max-width: 769px){
    .Card1{
-     /* border:1px solid red; */
-     max-width:80%;
+     border:1px solid red;
+     width:450px;
      margin: auto;
      margin-top:32%;
-     min-height:200px;
+    height: 25vh;
      display: flex;
-     /* flex-direction: column; */
+     flex-direction: column;
    }
    .card1-Lowest{
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width:55%;
 }
 .card1-listed{
@@ -432,7 +288,7 @@
     font-size: 10px;
 }
 .card1-imgdiv{
-    /* border: 1px solid teal; */
+    border: 1px solid teal;
     margin-left:2%;
     min-width: 45%;
     margin-top:2%;
@@ -440,7 +296,7 @@
 }
 .card1-image{
     min-width:85%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin-top: 15%;
     margin-left:2%;
 }
@@ -448,78 +304,52 @@
 
 .card1-Lowest>h1{
     font-size: 15px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin-top: 35%;
 }
 .card1-Lowest>button{
     background:rgb(244, 51,151);
     width: 100%;
-    /* padding: 15px; */
+    padding: 15px;
     color:rgb(255,255,255);
     font-size: 10px;
     margin-top:5%;
 }
-.heading-tag{
-    margin: auto;
-    text-align: center;
-    font-size: 10px;
-    /* border: 1px solid red; */
-}
 .card2{
-    max-width:80%;
+    width:500px;
     margin: auto;
-    height: 25vh;
+    height: 100vh;
     background-image:url("https://images.meesho.com/images/marketing/1678691670429.jpg");
     margin-top:12%;
-    background-size:99%;
+    background-size:cover;
     background-repeat: no-repeat;
-    /* border: 1px solid red; */
-}
-.card2item1{
-    /* border: 1px solid blue; */
-    display: flex;
-    width:95%;
-}
-.card2img1{
-    /* border: 1px solid brown ; */
-    margin-top:5%;
-    /* height: 70%; */
-    width: 60%;
-    margin-left:2% ;
-}
-.card2-image{
-    width:95%;
-    /* border:1px solid blue; */
-    margin-top: 5%;
-    /* height: 20vh; */
-
+    border: 1px solid red;
 }
 .card3{
-    /* border:1px solid red; */
-    max-width:80%;
+    border:1px solid red;
+    width:400px;
     height:25vh;
-    /* height: 80vh; */
-    /* background-position: right top; */
+    height: 80vh;
+    background-position: right top;
     background-repeat: no-repeat;
-    background-size:99%;
-    display: flex;
+    background-size:300px;
     background-image: url("https://images.meesho.com/images/marketing/1678691743015.jpg");
-    /* height: 400px; */
+    height: 400px;
     margin: auto;
     margin-top:5%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
    
-    /* padding: 5px; */
+    padding: 5px;
 }
 .card3-btn{
     width:30%;
     margin-top: 20%;
-    /* border: 1px solid blueviolet; */
+    border: 1px solid blueviolet;
 }
 .card3-btn>button{
     align-items: start;
     margin-left:0%;
-    /* padding:20px; */
+    padding:20px;
     padding: 18%;
     margin-top: 5%;
     border-radius: 10%;
@@ -527,27 +357,27 @@
     color: rgb(255,255,255);
     font-family:"Helvetica Neue", sans-serif, "Mier Book";
     width:95%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     cursor: pointer; 
 }
 .card3-image{
     display: flex;
-    /* border: 1px solid red; */
-    /* margin-top: 2%; */
+    border: 1px solid red;
+    margin-top: 2%;
     margin-left: 9%;
     width:65%;
 }
 .card3-image-1{
-    /* border:1px solid brown; */
+    border:1px solid brown;
     width:35%;
-    /* height: 80%; */
+    height: 80%;
     margin-left:2%;
     margin-top:5%;
 }
 .card3-image-1>button{
     background-color: black;
     color: rgb(255,255,255);
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin: auto;
     padding:2%;
     margin-top: 5%;
@@ -560,31 +390,31 @@
     width:70%;
     margin-top:5%;
     margin-left:2%;
-    /* height:70%; */
+    height:70%;
     cursor: pointer;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 .card4{
-    /* border:1px solid red; */
-    max-width:80%;
+    border:1px solid red;
+    width:500px;
     height: 30vh;
     background-repeat: no-repeat;
-    background-size:99%;
+    background-size:cover;
     display: flex;
     background-image: url("https://images.meesho.com/images/marketing/1678691892265.jpg");
     margin: auto;
     margin-top:10%;
-    /* margin-left:5%; */
-    /* padding: 10px; */
+    margin-left:5%;
+    padding: 10px;
 
 }
 .card4-btn{
     width:25%;
     margin-top:5%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 .card4-btn>button{
-    /* border:1px solid red; */
+    border:1px solid red;
     align-items: center;
     margin-left:5%;
     margin-top: 75%;
@@ -594,37 +424,37 @@
     color: rgb(255,255,255);
     font-family:"Helvetica Neue", sans-serif, "Mier Book";
     width:95%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     cursor: pointer;
 }
 .card4image{
     display: flex;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width:65%;
-    /* margin-top:10% ; */
+    margin-top:10% ;
     margin-left: 8%;
 }
 .card4imgtag{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width:70%;
-    /* height:50%; */
+    height:50%;
 }
 
 .card4-img-2{
-    /* border: 1px solid red; */
-    /* margin:auto; */
+    border: 1px solid red;
+    margin:auto;
     width:70%;
     margin-top:55%;
     align-items: center;
-    /* height: 40%; */
+    height: 40%;
     margin-left:3%
 }
 
 .card4imgtag>button{
     background-color: black;
     color: rgb(255,255,255);
-    /* border: 1px solid red; */
-    /* margin: auto; */
+    border: 1px solid red;
+    margin: auto;
     padding:1%;
     margin-top: 3%;
     align-items: center;
@@ -634,22 +464,24 @@
     font-size: 10px;
 }
 .card5{
-    max-width:80%;
+    width:500px;
     height: 25vh;
-    /* height: 80%; */
+    float:right;
+    height: 80%;
     background-repeat: no-repeat;
-    background-size:99%;
+    background-size:cover;
     display: flex;
     background-image: url("https://images.meesho.com/images/pow/downloadBannerDesktop.webp");
-    /* height: 400px; */
+    height: 400px;
+    justify-content: center;
     margin: auto;
     margin-top:5%;
-    /* padding: 10px; */
-    /* border:1px solid red; */
+    padding: 10px;
+    border:1px solid red;
 }
 .card5-heading1{
-    /* border:1px solid red; */
-    /* margin-left:10%; */
+    border:1px solid red;
+    margin-left:10%;
     width:95%;
    
     margin-top: 0%;
@@ -658,7 +490,7 @@
      text-align: end;
      color:rgb(85, 133, 248);
      font-size: 15px;
-     /* margin-right: 6%; */
+     margin-right: 6%;
 
 }
 .card5-htag{
@@ -670,13 +502,13 @@
    margin-top: 0%;
 }
 .card6{
-    max-width:80%;
-    /* height: 140%; */
-    /* border: 1px solid red; */
+    width:500px;
+    height: 140%;
+    border: 1px solid red;
     background-image: url("https://images.meesho.com/images/pow/supplyBannerDesktop.webp");
     background-repeat: no-repeat;
-    background-size: 99% 20vh;
-    /* margin-left: 5%; */
+    background-size:cover;
+    margin-left: 5%;
     margin: auto;
     margin-top: 5%;
     height: 25vh;
@@ -687,20 +519,20 @@
     font-size: 10px;
     margin-left: 5%;
     margin-top: 2%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 70%;
 }
 .card6>p{
     color: white;
     margin-left: 20%;
     font-size: 9px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 .card6-para{
     display: flex;
     color:white;
     margin-left:10%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     line-height: 5%;
     justify-content: space-around;
 }
@@ -708,10 +540,18 @@
     margin-left:2%;
     font-size: 8px;
 }
-.card7part{
-    /* border:1px solid blue; */
-    display:flex;
-    flex-direction: column ;
-    max-width: 80%;
- }
+.card7-countainer{
+    display: flex;
+    width:550px;
+    border:1px solid red;
 }
+.card7part{
+    border:1px solid blue;
+    display:grid;
+    grid-template-columns:180px 180px;
+    width: 80%;
+ }
+} */
+
+/* @media  screen and (min-width:500px) and (max-width:765px){
+} */

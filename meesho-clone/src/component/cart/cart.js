@@ -2,12 +2,13 @@
 import { Carted } from "../carted";
 import { useDispatch, useSelector } from "react-redux";
 // import { useState } from "react";
-import { removeItem, clearItem } from "../../features/cartslice";
+import { clearItem } from "../../features/cartslice";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { TOTAL } from "../carted";
 import "./cart.css";
+
 // import { Button } from "@mui/material";
 export const CartPage = () => {
   let dispatch = useDispatch();
@@ -23,8 +24,13 @@ export const CartPage = () => {
   const addMore = () => {
     navigate("/");
   };
-  const cleardata = () => {
+  const cleardata = (item) => {
     dispatch(clearItem());
+  };
+  const payment = () => {
+    alert("Payment Confirmation - Successful Transaction");
+    dispatch(clearItem());
+    navigate("/");
   };
   return (
     <>
@@ -63,12 +69,13 @@ export const CartPage = () => {
           })}
 
           <div className="totals">
-            <Button onClick={cleardata}>
+            <Button onClick={cleardata} >
               <DeleteIcon />
               ClearDATA
             </Button>
             <TOTAL className="totalamount" />
           </div>
+          <Button onClick={payment}>Payment</Button>
         </div>
       )}
     </>

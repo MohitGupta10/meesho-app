@@ -1,21 +1,27 @@
 import "./nav.css";
 import { Link } from "react-router-dom";
+import { Box, Container } from "@mui/material";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import ProductionQuantityLimitsIcon from "@mui/icons-material/ProductionQuantityLimits";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Badge from "@mui/material/Badge";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 // import { DebounceInput } from "react-debounce-input";
-import { useState } from "react";
+import SearchIcon from "@mui/icons-material/Search";
+import { useState, useEffect } from "react";
+import { setserachItem } from "../../features/cartslice";
 export const Navbar = () => {
   let count = useSelector((state) => state.cart.cartSlice.value);
   let data = useSelector((state) => state.cart.productsSlice.data);
+  const dispatch = useDispatch();
   // console.log(data);
+  const [search, setSerach] = useState("");
   const [list, setShow] = useState(false);
   const [profile, setProfile] = useState(false);
   const [icon, setIcon] = useState(false);
-  const [value, setValue] = useState("");
   const handleMouseOver = (event) => {
     event === "over" ? setShow(true) : setShow(false);
     event === "profile-over" ? setProfile(true) : setProfile(false);
@@ -24,17 +30,27 @@ export const Navbar = () => {
     setIcon(!icon);
   };
   const handelchange = (e) => {
-    setValue(e.target.value);
-    data.filter((item) => {
-      if (value.toString == item.brand.toString) {
-        console.log(item.brand);
-      }
-    });
+    setSerach(e.target.value);
   };
+  const filterData = data.filter((item) => {
+    return (
+      item.brand.toLowerCase().includes(search.toLowerCase()) ||
+      item.price.toString().includes(search) ||
+      item.discount.toString().includes(search) ||
+      item.id.toString().includes(search)
+    );
+  });
+  useEffect(() => {
+    dispatch(setserachItem(filterData));
+  }, [dispatch, filterData]);
+
+  // dispatch(setserachItem(filterData));
   return (
     <>
-      <div className="main-nav">
-        <div className="nav">
+      <Container
+        sx={{ position: "fixed", boxShadow: "1px 1px #888888",zIndex:"2",paddingLeft:1,top:0,background:""}}
+      >
+        <Box className="nav">
           <div className="meeshoicon">
             <Link to="/">
               <img
@@ -48,11 +64,10 @@ export const Navbar = () => {
               type="text"
               placeholder="Try Saree And kurti or Serach by product code "
               onChange={handelchange}
-              value={value}
             />
           </div>
           <div className="download">
-            <PhoneAndroidIcon className="img1" />
+            <PhoneAndroidIcon />
             <span className="spantag">Download App</span>
           </div>
           <div className="supplier">
@@ -61,18 +76,15 @@ export const Navbar = () => {
             </Link>
           </div>
           <div className="profile">
-            <PermIdentityIcon className="profile-img1" />
-
+            <PermIdentityIcon />
             <div
               onMouseOver={() => handleMouseOver("profile-over")}
               onMouseOut={() => handleMouseOver("profile-out")}
             >
               Profile
               {profile && (
-                <div className="signup">
-                  <Link to="/profile">
-                    <button>Sign up</button>
-                  </Link>
+                <div>
+                  <Link to="/profile">a</Link>
                 </div>
               )}
             </div>
@@ -87,7 +99,15 @@ export const Navbar = () => {
             </Badge>
           </div>
           <div className="format-icon" onClick={handelClick}>
-            <FormatListBulletedIcon />
+            <IconButton
+              size="small"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 1 }}
+            >
+              <MenuIcon />
+            </IconButton>
             {icon && (
               <div className="format-icon-div">
                 <ul className="format-icon-click">
@@ -118,7 +138,7 @@ export const Navbar = () => {
               </div>
             )}
           </div>
-        </div>
+        </Box>
         {/* <hr className="hrTag"></hr> */}
         <div className="item">
           <ul className="item-list">
@@ -196,7 +216,7 @@ export const Navbar = () => {
             <li className="item-list1">Bags & Footwear</li>
             <li className="item-list1">Electronic</li>
           </ul>
-          <select>
+          {/* <select>
             <option>Women Western</option>
             <option>Men</option>
             <option>Kids</option>
@@ -205,9 +225,9 @@ export const Navbar = () => {
             <option>Jewellery & Accessories</option>
             <option>Bags & Footwear</option>
             <option>Electronic</option>
-          </select>
+          </select> */}
         </div>
-      </div>
+      </Container>
     </>
   );
 };
