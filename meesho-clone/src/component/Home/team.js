@@ -57,7 +57,10 @@ export const Team = () => {
             <div className="team-microsoft-set-location">
               <div>
                 <div className="location-team">Location</div>
-                <img className="image-media"src="	https://assets.calendly.com/assets/frontend/media/setup-illustration-7274b422ed6de2743afe.svg" />
+                <img
+                  className="image-media"
+                  src="	https://assets.calendly.com/assets/frontend/media/setup-illustration-7274b422ed6de2743afe.svg"
+                />
               </div>
               <p className="ptag-event">
                 Set Microsoft Teams Conferencing as the Location for an Event
@@ -69,15 +72,16 @@ export const Team = () => {
             <div className="div-subscription-team">
               Your current subscription is Teams
             </div>
-
-            <div className="h4-tag-team-need">
-              For this integration, you'll also need:
+            <div className="team-need-content">
+              <div className="h4-tag-team-need">
+                For this integration, you'll also need:
+              </div>
+              <p className="para-microsoft-365">
+                <span className="span-microsoft-365">-</span>A Microsoft 365
+                Business account or an Office 365 Education account.
+              </p>
+              <button className="btn-microteam">Integrate Now</button>
             </div>
-            <p className="para-microsoft-365">
-              <span className="span-microsoft-365">-</span>A Microsoft 365
-              Business account or an Office 365 Education account.
-            </p>
-            <button className="btn-microteam">Integrate Now</button>
           </div>
         </div>
       </div>
