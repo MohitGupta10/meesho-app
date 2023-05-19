@@ -7,7 +7,7 @@ export const Team = () => {
           <div className="integration">
             <div className="image-div-integration">
               <img
-                className="image-arrrow-plus"
+                className="image-arrrow"
                 src="https://cdn.iconscout.com/icon/free/png-256/free-left-arrow-1438247-1216208.png?f=avif&w=128"
               />
             </div>
@@ -47,7 +47,7 @@ export const Team = () => {
               the meeting details into your calendar when an invitee books a
               Calendly event.
             </p>
-            <p>
+            <p className="team-para-2">
               Integrate Microsoft Teams with Calendly to add Teams video
               conferencing as a location option for events you schedule with
               Calendly. This way, you don’t have to edit your calendar app’s
@@ -57,7 +57,7 @@ export const Team = () => {
             <div className="team-microsoft-set-location">
               <div>
                 <div className="location-team">Location</div>
-                <img src="	https://assets.calendly.com/assets/frontend/media/setup-illustration-7274b422ed6de2743afe.svg" />
+                <img className="image-media"src="	https://assets.calendly.com/assets/frontend/media/setup-illustration-7274b422ed6de2743afe.svg" />
               </div>
               <p className="ptag-event">
                 Set Microsoft Teams Conferencing as the Location for an Event

@@ -8,8 +8,11 @@
     background-color: #ffffff;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
-.image-arrrow-plus{
+.image-arrrow{
     width:20px;
+}
+.image-arrrow-plus{
+    width:20px
 }
 .image-micro-calendly{
     width:170px
@@ -170,4 +173,1504 @@
     margin-left: 15px;
     font-size: 13px;
     margin-top: 18px;
+}
+
+@media screen and (min-width:100px)and (max-width:350px) {
+    .team-container{
+        /* border:1px solid red; */
+        height: 330vh;
+        border-radius: 10px;
+        width:92%;
+        margin-left:7%;
+        margin-top: 3%;
+        background-color: #ffffff;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .image-arrow{
+        width:20px;
+    }
+    .image-arrrow-plus{
+        width:10px;
+        color:#0069FF;
+        /* background-color: #0069FF; */
+        /* display: none; */
+    }
+    .image-micro-calendly{
+        width:70px;
+        /* display: none; */
+    }
+    .image-div-integration{
+        /* border:1px solid red; */
+        margin: auto;
+        margin-left: 15px;
+        /* display: none; */
+    }
+    .team-nav{
+        display: flex;
+        width:90%;
+        /* border:1px solid red; */
+        /* display: none; */
+        margin:auto;
+        margin-top: 15px;
+        margin-left: 5px;
+        justify-content: space-between;
+        /* display: none; */
+        /* justify-content: space-around; */
+    }
+    .hr-tag{
+        width:100%;
+        /* display: none; */
+    }
+    .integration{
+        display: flex;
+        border:none;
+        height: 45px;
+        margin-top: 15px;
+        margin-left:0px;
+        border-radius: 20px;
+        width:25px;
+        /* display: none; */
+        /* width:30% */
+        /* width:100px; */
+        
+    }
+    .h4-tag{
+        font-size: small;
+        text-align: center;
+        /* align-items: center; */
+        /* border:1px solid blue; */
+        margin: auto;
+        /* margin-right: 42px; */
+        margin-top: 16px;
+        display: none;
+    }
+    .microsoft{
+        display: flex;
+        /* border: 1px solid blue; */
+        margin-left:0px;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        /* justify-content: space-between; */
+        /* width:170px; */
+        /* display: none; */
+        /* margin-right:px ; */
+    }
+    .image-microsoft{
+        width:20px;
+        /* display: none; */
+    }
+    .microsoft-image-div{
+        margin-top: 20px;
+        /* display: none; */
+    }
+    .h2-tag{
+        margin-top:29px;
+        font-size: 9px;
+        color:#454DAC;
+        /* border:1px solid red; */
+        line-height: 10px;
+        /* display: none; */
+    }
+    .span-tag{
+        font-size:7px;
+        /* width:90%; */
+        color: #767676;
+        line-height: 3px;
+        /* display: none; */
+    }
+    .plus-tag-calendly{
+        /* border: 1px solid red; */
+        height: 30px;
+        margin:0;
+        margin-left:0px;
+        margin-top:25px;
+        margin-right: 0px;
+        /* display: none; */
+    }
+    .calendly-image-div{
+        margin:0;
+        margin-right:0px;
+        /* border: 1px solid red; */
+        margin-top: 25px;
+        margin-left: 0px;
+        /* display: none; */
+    }
+    .team-point-subcription{
+        display: flex;
+        width:90%;
+        flex-direction: column-reverse;
+        /* border: 1px solid blue; */
+        margin: auto;
+        /* display: none; */
+    }
+    .team-para{
+        width:89%;
+    }
+    .team-para-1{
+        font-size:small;
+        color: #1A1A1A;
+        /* display: none; */
+    }
+    .team-subscription{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        border:1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+        margin-left: 5px;
+        margin-top: 2px;
+        width:99%;
+        border-radius: 5px;
+
+        flex: 1 1 auto;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .div-subscription-team{
+        /* font-size: large; */
+        height: 100px;
+        padding:15px 20px 0px;
+        /* border:1px solid blue; */
+        width:99%;
+        color:#1A1A1A;
+        font-family: proxima nova,sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+    
+        /* margin-top: 15px; */
+        /* box-sizing: inherit; */
+        background-color:transparent;
+        /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
+        /* display: none; */
+    }
+    .h4-tag-team-need{
+        font-size: 15px;
+        margin:0px 20px 10px;
+        font-weight: 700;
+        /* border:1px solid red; */
+        /* display: none; */
+    }
+    .span-microsoft-365{
+        margin-right: 13px;
+        /* display: none; */
+    }
+    .para-microsoft-365{
+        margin-left: 17px;
+        font-weight:200;
+        font-family: proxima nova,sans-serif;
+        font-size: 16px;
+        /* display: none; */
+    }
+    .btn-microteam{
+        color:#ffffff;
+        background-color: #0069FF;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        width:90%;
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+        font-family: sans-serif;
+        margin-bottom: 25px;
+        /* display: none; */
+    }
+    .location-team{
+        margin-left: 18px;
+        font-size: 12px;
+        color: #1A1A1A;
+        display: none;
+    }
+    .team-microsoft-set-location{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        /* display: none; */
+    }
+    .image-media{
+        width:250px
+    }
+    .ptag-event{
+        /* display: none; */
+        /* border: 1px solid red; */
+        margin-left: 10px;
+        font-size: 13px;
+        margin-top: 18px;
+    }
+ 
+}
+@media screen and (min-width:350px)and (max-width:396px) {
+    .team-container{
+        /* border:1px solid red; */
+        height: 270vh;
+        border-radius: 10px;
+        width:92%;
+        margin-left:7%;
+        margin-top: 3%;
+        background-color: #ffffff;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .image-arrow{
+        width:30px;
+        color:#0069FF;
+    }
+    .image-arrrow-plus{
+        width:10px;
+        /* background-color: #0069FF; */
+        /* display: none; */
+    }
+    .image-micro-calendly{
+        width:90px;
+        /* display: none; */
+    }
+    .image-div-integration{
+        /* border:1px solid red; */
+        margin: auto;
+        margin-left: 15px;
+        /* display: none; */
+    }
+    .team-nav{
+        display: flex;
+        width:90%;
+        /* border:1px solid red; */
+        /* display: none; */
+        margin:auto;
+        margin-top: 15px;
+        margin-left: 5px;
+        justify-content: space-between;
+        /* display: none; */
+        /* justify-content: space-around; */
+    }
+    .hr-tag{
+        width:100%;
+        /* display: none; */
+    }
+    .integration{
+        display: flex;
+        border:none;
+        height: 45px;
+        margin-top: 15px;
+        margin-left:0px;
+        border-radius: 20px;
+        width:25px;
+        /* display: none; */
+        /* width:30% */
+        /* width:100px; */
+        
+    }
+    .h4-tag{
+        font-size:x-large;
+        text-align: center;
+        /* align-items: center; */
+        /* border:1px solid blue; */
+        margin: auto;
+        /* margin-right: 42px; */
+        margin-top: 16px;
+        display: none;
+    }
+    .microsoft{
+        display: flex;
+        /* border: 1px solid blue; */
+        margin-left:0px;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        /* justify-content: space-between; */
+        /* width:170px; */
+        /* display: none; */
+        /* margin-right:px ; */
+    }
+    .image-microsoft{
+        width:40px;
+        /* display: none; */
+    }
+    .microsoft-image-div{
+        margin-top: 20px;
+        /* display: none; */
+    }
+    .h2-tag{
+        margin-top:29px;
+        font-size: 13px;
+        color:#454DAC;
+        /* border:1px solid red; */
+        line-height: 10px;
+        /* display: none; */
+    }
+    .span-tag{
+        font-size:10px;
+        /* width:90%; */
+        color: #767676;
+        line-height: 10px;
+        /* display: none; */
+    }
+    .plus-tag-calendly{
+        /* border: 1px solid red; */
+        height: 30px;
+        margin:0;
+        margin-left:0px;
+        margin-top:25px;
+        margin-right: 0px;
+        /* display: none; */
+    }
+    .calendly-image-div{
+        margin:0;
+        margin-right:0px;
+        /* border: 1px solid red; */
+        margin-top: 25px;
+        margin-left: 0px;
+        /* display: none; */
+    }
+    .team-point-subcription{
+        display: flex;
+        width:90%;
+        flex-direction: column-reverse;
+        /* border: 1px solid blue; */
+        margin: auto;
+        /* display: none; */
+    }
+    .team-para{
+        width:89%;
+        margin-top: 15px;
+    }
+    .team-para-1{
+        font-size:small;
+        color: #1A1A1A;
+        /* display: none; */
+    }
+    .team-subscription{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        border:1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+        margin-left: 5px;
+        margin-top: 2px;
+        width:99%;
+        border-radius: 5px;
+
+        flex: 1 1 auto;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .div-subscription-team{
+        /* font-size: large; */
+        height: 100px;
+        padding:15px 20px 0px;
+        /* border:1px solid blue; */
+        width:90%;
+        color:#1A1A1A;
+        font-family: proxima nova,sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+    
+        /* margin-top: 15px; */
+        /* box-sizing: inherit; */
+        background-color:transparent;
+        /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
+        /* display: none; */
+    }
+    .h4-tag-team-need{
+        font-size: 15px;
+        margin:0px 20px 10px;
+        font-weight: 700;
+        /* border:1px solid red; */
+        /* display: none; */
+    }
+    .span-microsoft-365{
+        margin-right: 13px;
+        /* display: none; */
+    }
+    .para-microsoft-365{
+        margin-left: 17px;
+        font-weight:200;
+        font-family: proxima nova,sans-serif;
+        font-size: 16px;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .btn-microteam{
+        color:#ffffff;
+        background-color: #0069FF;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        width:90%;
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+        font-family: sans-serif;
+        margin-bottom: 25px;
+        /* display: none; */
+    }
+    .team-microsoft-set-location{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .image-media{
+        width:290px
+    }
+    .ptag-event{
+        /* display: none; */
+        /* border: 1px solid red; */
+        margin-left: 10px;
+        font-size: 13px;
+        margin-top: 18px;
+    }
+ 
+}
+@media screen and (min-width:396px)and (max-width:500px) {
+    .team-container{
+        /* border:1px solid red; */
+        height: 275vh;
+        border-radius: 10px;
+        width:92%;
+        margin-left:7%;
+        margin-top: 3%;
+        background-color: #ffffff;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .image-arrow{
+        width:35px;
+        color:#0069FF;
+    }
+    .image-arrrow-plus{
+        width:15px;
+        /* background-color: #0069FF; */
+        /* display: none; */
+    }
+    .image-micro-calendly{
+        width:90px;
+        /* display: none; */
+    }
+    .image-div-integration{
+        /* border:1px solid red; */
+        margin: auto;
+        margin-left: 15px;
+        /* display: none; */
+    }
+    .team-nav{
+        display: flex;
+        width:90%;
+        /* border:1px solid red; */
+        /* display: none; */
+        margin:auto;
+        margin-top: 15px;
+        margin-left: 5px;
+        justify-content: space-between;
+        /* display: none; */
+        /* justify-content: space-around; */
+    }
+    .hr-tag{
+        width:100%;
+        /* display: none; */
+    }
+    .integration{
+        display: flex;
+        border:none;
+        height: 45px;
+        margin-top: 15px;
+        margin-left:0px;
+        border-radius: 20px;
+        width:25px;
+        /* display: none; */
+        /* width:30% */
+        /* width:100px; */
+        
+    }
+    .h4-tag{
+        font-size:x-large;
+        text-align: center;
+        /* align-items: center; */
+        /* border:1px solid blue; */
+        margin: auto;
+        /* margin-right: 42px; */
+        margin-top: 16px;
+        display: none;
+    }
+    .microsoft{
+        display: flex;
+        /* border: 1px solid blue; */
+        margin-left:0px;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        /* justify-content: space-between; */
+        /* width:170px; */
+        /* display: none; */
+        /* margin-right:px ; */
+    }
+    .image-microsoft{
+        width:40px;
+        /* display: none; */
+    }
+    .microsoft-image-div{
+        margin-top: 20px;
+        /* display: none; */
+    }
+    .h2-tag{
+        margin-top:29px;
+        font-size: 13px;
+        color:#454DAC;
+        /* border:1px solid red; */
+        line-height: 10px;
+        /* display: none; */
+    }
+    .span-tag{
+        font-size:10px;
+        /* width:90%; */
+        color: #767676;
+        line-height: 10px;
+        /* display: none; */
+    }
+    .plus-tag-calendly{
+        /* border: 1px solid red; */
+        height: 30px;
+        margin:0;
+        margin-left:0px;
+        margin-top:25px;
+        margin-right: 0px;
+        /* display: none; */
+    }
+    .calendly-image-div{
+        margin:0;
+        margin-right:0px;
+        /* border: 1px solid red; */
+        margin-top: 25px;
+        margin-left: 0px;
+        /* display: none; */
+    }
+    .team-point-subcription{
+        display: flex;
+        width:80%;
+        flex-direction: column-reverse;
+        /* border: 1px solid blue; */
+        margin: auto;
+        /* display: none; */
+    }
+    .team-para{
+        width:89%;
+        margin-top: 15px;
+    }
+    .team-para-1{
+        font-size:small;
+        color: #1A1A1A;
+        /* display: none; */
+    }
+    .team-subscription{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        border:1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+        margin-left: 5px;
+        margin-top: 2px;
+        width:99%;
+        border-radius: 5px;
+
+        flex: 1 1 auto;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .div-subscription-team{
+        /* font-size: large; */
+        height: 100px;
+        padding:15px 24px 10px;
+        /* border:1px solid blue; */
+        width:83%;
+        color:#1A1A1A;
+        font-family: proxima nova,sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+    
+        /* margin-top: 15px; */
+        /* box-sizing: inherit; */
+        background-color:transparent;
+        /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
+        /* display: none; */
+    }
+    .h4-tag-team-need{
+        font-size: 15px;
+        margin:0px 20px 10px;
+        font-weight: 700;
+        /* border:1px solid red; */
+        /* display: none; */
+    }
+    .span-microsoft-365{
+        margin-right: 13px;
+        /* display: none; */
+    }
+    .para-microsoft-365{
+        margin-left: 17px;
+        font-weight:200;
+        font-family: proxima nova,sans-serif;
+        font-size: 16px;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .btn-microteam{
+        color:#ffffff;
+        background-color: #0069FF;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        width:90%;
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+        font-family: sans-serif;
+        margin-bottom: 25px;
+        /* display: none; */
+    }
+    .team-microsoft-set-location{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .image-media{
+        width:250px
+    }
+    .ptag-event{
+        /* display: none; */
+        /* border: 1px solid red; */
+        margin-left: 10px;
+        font-size: 13px;
+        margin-top: 18px;
+    }
+ 
+}
+@media screen and (min-width:500px)and (max-width:796px) {
+    .team-container{
+        /* border:1px solid red; */
+        height: 240vh;
+        border-radius: 10px;
+        width:92%;
+        margin-left:7%;
+        margin-top: 3%;
+        background-color: #ffffff;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .image-arrow{
+        width:40px;
+        color:#0069FF;
+    }
+    .image-arrrow-plus{
+        width:20px;
+        /* background-color: #0069FF; */
+        /* display: none; */
+    }
+    .image-micro-calendly{
+        width:100px;
+        /* display: none; */
+    }
+    .image-div-integration{
+        /* border:1px solid red; */
+        margin: auto;
+        margin-left: 15px;
+        /* display: none; */
+    }
+    .team-nav{
+        display: flex;
+        width:90%;
+        /* border:1px solid red; */
+        /* display: none; */
+        margin:auto;
+        margin-top: 15px;
+        margin-left: 5px;
+        justify-content: space-between;
+        /* display: none; */
+        /* justify-content: space-around; */
+    }
+    .hr-tag{
+        width:100%;
+        /* display: none; */
+    }
+    .integration{
+        display: flex;
+        border:none;
+        height: 45px;
+        margin-top: 15px;
+        margin-left:0px;
+        border-radius: 20px;
+        width:25px;
+        /* display: none; */
+        /* width:30% */
+        /* width:100px; */
+        
+    }
+    .h4-tag{
+        font-size:x-large;
+        text-align: center;
+        /* align-items: center; */
+        /* border:1px solid blue; */
+        margin: auto;
+        /* margin-right: 42px; */
+        margin-top: 16px;
+        display: none;
+    }
+    .microsoft{
+        display: flex;
+        /* border: 1px solid blue; */
+        margin-left:0px;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        /* justify-content: space-between; */
+        /* width:170px; */
+        /* display: none; */
+        /* margin-right:px ; */
+    }
+    .image-microsoft{
+        width:80px;
+        /* display: none; */
+    }
+    .microsoft-image-div{
+        margin-top: 5px;
+        /* display: none; */
+    }
+    .h2-tag{
+        margin-top:29px;
+        font-size: 18px;
+        color:#454DAC;
+        /* border:1px solid red; */
+        line-height: 10px;
+        /* display: none; */
+    }
+    .span-tag{
+        font-size:13px;
+        /* width:90%; */
+        color: #767676;
+        line-height: 15px;
+        /* display: none; */
+    }
+    .plus-tag-calendly{
+        /* border: 1px solid red; */
+        height: 30px;
+        margin:0;
+        margin-left:0px;
+        margin-top:25px;
+        margin-right: 0px;
+        /* display: none; */
+    }
+    .calendly-image-div{
+        margin:0;
+        margin-right:0px;
+        /* border: 1px solid red; */
+        margin-top: 25px;
+        margin-left: 0px;
+        /* display: none; */
+    }
+    .team-point-subcription{
+        display: flex;
+        width:90%;
+        flex-direction: column-reverse;
+        /* border: 1px solid blue; */
+        margin: auto;
+        /* display: none; */
+    }
+    .team-para{
+        width:89%;
+        margin-top: 15px;
+        /* border:1px solid red */
+    }
+    .team-para-1{
+        font-size:medium;
+        color: #1A1A1A;
+        /* border: 1px solid red; */
+        /* margin:0px 0px 10px */
+        /* display: none; */
+    }
+    .team-para-2{
+        margin:0px 0px 10px;
+        font-size: small;
+    }
+    .team-subscription{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        border:1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+        margin-left: 5px;
+        margin-top: 2px;
+        width:90%;
+        border-radius: 5px;
+
+        flex: 1 1 auto;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .div-subscription-team{
+        /* font-size: large; */
+        /* height: 100px; */
+        padding:15px 24px 0px ;
+        /* border:1px solid blue; */
+        width:90%;
+        color:#1A1A1A;
+        font-family: proxima nova,sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+    
+        /* margin-top: 15px; */
+        /* box-sizing: inherit; */
+        background-color:transparent;
+        /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
+        /* display: none; */
+    }
+    .h4-tag-team-need{
+        font-size: 15px;
+        margin:0px 20px 10px;
+        font-weight: 700;
+        /* border:1px solid red; */
+        /* display: none; */
+    }
+    .span-microsoft-365{
+        margin-right: 13px;
+        /* display: none; */
+    }
+    .para-microsoft-365{
+        margin-left: 17px;
+        font-weight:200;
+        font-family: proxima nova,sans-serif;
+        font-size: 16px;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .btn-microteam{
+        color:#ffffff;
+        background-color: #0069FF;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        width:90%;
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+        font-family: sans-serif;
+        margin-bottom: 25px;
+        cursor: pointer;
+        /* display: none; */
+    }
+    .team-microsoft-set-location{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .image-media{
+        width:250px
+    }
+    .ptag-event{
+        /* display: none; */
+        /* border: 1px solid red; */
+        margin-left: 10px;
+        font-size: 13px;
+        margin-top: 18px;
+    }
+ 
+}
+
+@media screen and (min-width:796px)and (max-width:900px) {
+    .team-container{
+        /* border:1px solid red; */
+        height: 230vh;
+        border-radius: 10px;
+        width:92%;
+        margin-left:7%;
+        margin-top: 3%;
+        background-color: #ffffff;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .image-arrow{
+        width:45px;
+        color:#0069FF;
+    }
+    .image-arrrow-plus{
+        width:15px;
+        /* background-color: #0069FF; */
+        /* display: none; */
+    }
+    .image-micro-calendly{
+        width:120px;
+        /* display: none; */
+    }
+    .image-div-integration{
+        /* border:1px solid red; */
+        margin: auto;
+        margin-left: 15px;
+        /* display: none; */
+    }
+    .team-nav{
+        display: flex;
+        width:90%;
+        /* border:1px solid red; */
+        /* display: none; */
+        margin:auto;
+        margin-top: 15px;
+        margin-left:15px;
+        padding: 0px 20px;
+        justify-content: space-between;
+        /* display: none; */
+        /* justify-content: space-around; */
+    }
+    .hr-tag{
+        width:100%;
+        /* display: none; */
+    }
+    .integration{
+        display: flex;
+        border:none;
+        height: 45px;
+        margin-top: 25px;
+        margin-left:20px;
+        border-radius: 20px;
+        width:75px;
+        /* display: none; */
+        /* width:30% */
+        /* width:100px; */
+        
+    }
+    .h4-tag{
+        font-size:x-large;
+        text-align: center;
+        /* align-items: center; */
+        /* border:1px solid blue; */
+        margin: auto;
+        /* margin-right: 42px; */
+        margin-top: 16px;
+        display: none;
+    }
+    .microsoft{
+        display: flex;
+        /* border: 1px solid blue; */
+        margin-left:0px;
+        margin-top: 3px;
+        margin-bottom: 5px;
+        /* justify-content: space-between; */
+        /* width:170px; */
+        /* display: none; */
+        /* margin-right:px ; */
+    }
+    .image-microsoft{
+        width:100px;
+        /* display: none; */
+    }
+    .microsoft-image-div{
+        margin-top: 0px;
+        /* display: none; */
+    }
+    .h2-tag{
+        margin-top:29px;
+        font-size: 20px;
+        color:#454DAC;
+        /* border:1px solid red; */
+        line-height:1.5rem;
+        /* display: none; */
+    }
+    .span-tag{
+        font-size:15px;
+        /* width:90%; */
+        color: #767676;
+        line-height: 20px;
+        /* display: none; */
+    }
+    .plus-tag-calendly{
+        /* border: 1px solid red; */
+        height: 30px;
+        margin:0;
+        margin-left:0px;
+        margin-top:25px;
+        margin-right: 15px;
+        /* display: none; */
+    }
+    .calendly-image-div{
+        margin:0;
+        margin-right:0px;
+        /* border: 1px solid red; */
+        margin-top: 25px;
+        margin-left: 0px;
+        /* display: none; */
+    }
+    .team-point-subcription{
+        display: flex;
+        width:80%;
+        flex-direction: column-reverse;
+        /* border: 1px solid blue; */
+        margin: auto;
+        /* display: none; */
+    }
+    .team-para{
+        width:89%;
+        margin-top: 15px;
+    }
+    .team-para-1{
+        font-size:small;
+        color: #1A1A1A;
+        /* display: none; */
+    }
+    .team-subscription{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        border:1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+        margin-left: 5px;
+        margin-top: 2px;
+        width:99%;
+        border-radius: 5px;
+
+        flex: 1 1 auto;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .div-subscription-team{
+        /* font-size: large; */
+        height: 50px;
+        padding:15px 24px 10px;
+        /* border:1px solid blue; */
+        width:83%;
+        color:#1A1A1A;
+        font-family: proxima nova,sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+    
+        /* margin-top: 15px; */
+        /* box-sizing: inherit; */
+        background-color:transparent;
+        /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
+        /* display: none; */
+    }
+    .h4-tag-team-need{
+        font-size: 15px;
+        margin:0px 20px 20px;
+        font-weight: 700;
+        /* border:1px solid red; */
+        line-height: 1.5rem;
+        /* display: none; */
+    }
+    .span-microsoft-365{
+        margin-right: 13px;
+        /* display: none; */
+    }
+    .para-microsoft-365{
+        margin-left: 17px;
+        font-weight:200;
+        font-family: proxima nova,sans-serif;
+        font-size: 16px;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .btn-microteam{
+        color:#ffffff;
+        background-color: #0069FF;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        width:90%;
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+        font-family: sans-serif;
+        margin-bottom: 25px;
+        cursor: pointer;
+        /* display: none; */
+    }
+    .team-microsoft-set-location{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        /* border: 1px solid red; */
+        /* display: none; */
+    }
+    .image-media{
+        width:250px
+    }
+    .ptag-event{
+        /* display: none; */
+        /* border: 1px solid red; */
+        margin-left: 10px;
+        font-size: 13px;
+        margin-top: 18px;
+    }
+ 
+}
+
+
+
+
+
+@media screen and (min-width:900px)and (max-width:1100px) {
+    .team-container{
+        /* border:1px solid red; */
+        height: 150vh;
+        border-radius: 10px;
+        width:90%;
+        margin-left:7%;
+        margin-top: 3%;
+        background-color: #ffffff;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .image-arrrow{
+        width:20px;
+    }
+    .image-arrrow-plus{
+        width:20px
+    }
+    .image-micro-calendly{
+        width:170px
+    }
+    .image-div-integration{
+        /* border:1px solid red; */
+        margin: auto;
+        margin-left: 15px;
+    }
+    .team-nav{
+        display: flex;
+        width:90%;
+        border:1px solid red;
+        margin:auto;
+        margin-top: 15px;
+        margin-left: 10px;
+        /* justify-content: space-around; */
+    }
+    .hr-tag{
+        width:100%;
+    }
+    .integration{
+        display: flex;
+        border:1px solid black;
+        height: 45px;
+        margin-top: 40px;
+        margin-left: 30px;
+        border-radius: 20px;
+        /* width:130px */
+        /* width:30% */
+        /* width:100px; */
+        
+    }
+    .h4-tag{
+        font-size: small;
+        text-align: center;
+        /* align-items: center; */
+        /* border:1px solid blue; */
+        margin: auto;
+        margin-right: 42px;
+        margin-top: 16px;
+    }
+    .microsoft{
+        display: flex;
+        /* border: 1px solid blue; */
+        margin-left: 30px;
+    }
+    .image-microsoft{
+        width:90px;
+    }
+    .microsoft-image-div{
+        margin-top: 20px;
+    }
+    .h2-tag{
+        margin-top: 50px;
+        font-size:large;
+        color:#454DAC;
+        border:1px solid red;
+        line-height: 1.9rem;
+        width:160px
+    }
+    .span-tag{
+        font-size:medium;
+        color: #767676;
+        line-height: 1px;
+    }
+    .plus-tag-calendly{
+        /* border: 1px solid red; */
+        height: 30px;
+        margin: auto;
+        margin-left: 15px;
+        margin-top: 60px;
+    }
+    .calendly-image-div{
+        margin: auto;
+        margin-right: 140px;
+        margin-left: 15px;
+        /* border: 1px solid red; */
+        margin-top: 55px;
+    }
+    .team-point-subcription{
+        display: flex;
+        width:90%;
+        /* border: 1px solid blue; */
+        margin: auto;
+    }
+    .team-para{
+        width:89%;
+    }
+    .team-para-1{
+        font-size:large;
+        color: #1A1A1A;
+    }
+    .team-subscription{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        border:1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+        margin-left: 5px;
+        margin-top: 20px;
+        width:40%;
+        border-radius: 5px;
+        /* flex: 1 1 auto; */
+        /* border: 1px solid red; */
+        
+    }
+    .div-subscription-team{
+        /* font-size: large; */
+        height: 70px;
+        padding: 15px 24px 10px;
+        /* border:1px solid blue; */
+        width:260px;
+        color:#1A1A1A;
+        font-family: proxima nova,sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+    
+        /* margin-top: 15px; */
+        /* box-sizing: inherit; */
+        background-color: #F2F2F2;
+        /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
+    }
+    .h4-tag-team-need{
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 25px;
+        font-weight: 700;
+    }
+    .span-microsoft-365{
+        margin-right: 13px;
+    }
+    .para-microsoft-365{
+        margin-left: 25px;
+        font-weight:200;
+        font-family: proxima nova,sans-serif;
+        font-size: 16px;
+    }
+    .btn-microteam{
+        color:#ffffff;
+        background-color: #0069FF;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        width:90%;
+        margin-top: 10px;
+        margin-left: 15px;
+        font-size: 16px;
+        font-family: sans-serif;
+    }
+    .location-team{
+        margin-left: 18px;
+        font-size: 12px;
+        color: #1A1A1A;
+    }
+    .team-microsoft-set-location{
+        display: flex;
+    }
+    .ptag-event{
+        /* border: 1px solid red; */
+        margin-left: 15px;
+        font-size: 13px;
+        margin-top: 18px;
+    }
+     
+}
+
+
+@media screen and (min-width:1100px)and (max-width:1300px) {
+    .team-container{
+        /* border:1px solid red; */
+        height: 140vh;
+        border-radius: 10px;
+        margin: auto;
+        width:85%;
+        /* margin-left:1%; */
+        margin-left: 2%;
+        margin-top: 3%;
+        background-color: #ffffff;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .image-arrrow{
+        width:20px;
+    }
+    .image-arrrow-plus{
+        width:20px
+    }
+    .image-micro-calendly{
+        width:170px
+    }
+    .image-div-integration{
+        /* border:1px solid red; */
+        margin: auto;
+        margin-left: 15px;
+    }
+    .team-nav{
+        display: flex;
+        width:80%;
+        /* border:1px solid red; */
+        margin:auto;
+        margin-top: 15px;
+        margin-left: 10px;
+        /* justify-content: space-around; */
+    }
+    .hr-tag{
+        width:100%;
+    }
+    .integration{
+        display: flex;
+        border:1px solid black;
+        height: 45px;
+        margin-top: 40px;
+        margin-left: 70px;
+        border-radius: 20px;
+        width:130px
+        /* width:30% */
+        /* width:100px; */
+        
+    }
+    .h4-tag{
+        font-size: small;
+        text-align: center;
+        /* align-items: center; */
+        /* border:1px solid blue; */
+        margin: auto;
+        margin-right: 42px;
+        margin-top: 16px;
+    }
+    .microsoft{
+        display: flex;
+        /* border: 1px solid blue; */
+        /* width:400px; */
+
+        margin-left:8%;
+    }
+    .image-microsoft{
+        width:80px;
+    }
+    .microsoft-image-div{
+        margin-top: 20px;
+    }
+    .h2-tag{
+        margin-top: 40px;
+        font-size: x-large;
+        color:#454DAC;
+        /* border:1px solid red; */
+        line-height:1.5rem;
+        width:180px;
+    }
+    .span-tag{
+        font-size:large;
+        color: #767676;
+        line-height: 1.5rem;
+    }
+    .plus-tag-calendly{
+        /* border: 1px solid red; */
+        height: 30px;
+        margin: auto;
+        margin-right: 2%;
+        margin-left:2%;
+        margin-top: 45px;
+    }
+    .calendly-image-div{
+        margin: auto;
+        margin-right:25%;
+        /* margin-left: 5px; */
+        /* border: 1px solid red; */
+        margin-top: 40px;
+    }
+    .team-point-subcription{
+        display: flex;
+        width:90%;
+        /* border: 1px solid blue; */
+        margin: auto;
+    }
+    .team-para{
+        width:75%;
+    }
+    .team-para-1{
+        font-size:large;
+        color: #1A1A1A;
+        margin-top:30px;
+    }
+    .team-para-2{
+        font-size: medium;
+        margin:0px 0px 10px;
+    }
+    .team-subscription{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        border:1px solid var(--text-color-level3,rgba(26,26,26,0.1));
+        margin-left: 5px;
+        margin-top: 20px;
+        width:30%;
+        border-radius: 5px;
+        /* flex: 1 1 auto; */
+        /* margin-left: 9%; */
+        /* borde/r: 1px solid red; */
+        
+    }
+    .div-subscription-team{
+        /* font-size: large; */
+        height: 70px;
+        padding: 15px 25px 10px;
+        /* border:1px solid blue; */
+        width:100%;
+        color:#1A1A1A;
+        font-family: proxima nova,sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        /* margin-left:5px; */
+    
+        /* margin-top: 15px; */
+        /* box-sizing: inherit; */
+        background-color: #F2F2F2;
+        /* box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px; */
+    }
+    .h4-tag-team-need{
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 25px;
+        font-weight: 700;
+        /* border: 1px solid red; */
+    }
+    .span-microsoft-365{
+        margin-right: 12px;
+    }
+    .para-microsoft-365{
+        margin-left: 25px;
+        font-weight:200;
+        font-family: proxima nova,sans-serif;
+        font-size: 15px;
+        /* border: 1px solid red; */
+    }
+    .btn-microteam{
+        color:#ffffff;
+        background-color: #0069FF;
+        height: 50px;
+        border-radius: 30px;
+        border: none;
+        width:85%;
+        margin-top: 10px;
+        margin-left: 15px;
+        font-size: 16px;
+        font-family: sans-serif;
+        cursor: pointer;
+    }
+    .location-team{
+        margin-left: 18px;
+        font-size: 12px;
+        color: #1A1A1A;
+    }
+    .team-microsoft-set-location{
+        display: flex;
+    }
+    .ptag-event{
+        /* border: 1px solid red; */
+        margin-left: 15px;
+        font-size: 15px;
+        margin-top: 18px;
+    }
+    
 }
