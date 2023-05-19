@@ -41,7 +41,7 @@ export const Team = () => {
         <hr className="hr-tag"></hr>
         <div className="team-point-subcription">
           <div className="team-para">
-            <p>
+            <p className="team-para-1">
               Use Calendly’s Microsoft Teams Conferencing integration to
               automatically create Teams video conferencing meetings and insert
               the meeting details into your calendar when an invitee books a
@@ -56,6 +56,7 @@ export const Team = () => {
             </p>
             <div className="team-microsoft-set-location">
               <div>
+                <div className="location-team">Location</div>
                 <img src="	https://assets.calendly.com/assets/frontend/media/setup-illustration-7274b422ed6de2743afe.svg" />
               </div>
               <p className="ptag-event">
@@ -66,17 +67,15 @@ export const Team = () => {
           </div>
           <div className="team-subscription">
             <div className="div-subscription-team">
-              <h4 className="h4-team-subscription">
-                Your current subscription is Teams
-              </h4>
+              Your current subscription is Teams
             </div>
 
-            <h4 className="h4-tag-team-need">
+            <div className="h4-tag-team-need">
               For this integration, you'll also need:
-            </h4>
+            </div>
             <p className="para-microsoft-365">
-              <span className="span-microsoft-365">-</span>A Microsoft 365 Business account or an Office 365 Education
-              account.
+              <span className="span-microsoft-365">-</span>A Microsoft 365
+              Business account or an Office 365 Education account.
             </p>
             <button className="btn-microteam">Integrate Now</button>
           </div>
