@@ -1,22 +1,17 @@
-// import { useLocation } from "react-router-dom";
 import { Carted } from "../carted";
 import { useDispatch, useSelector } from "react-redux";
-// import { useState } from "react";
+import {CardMedia, Grid } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { clearItem } from "../../features/cartslice";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { Footer } from "../footer/footer";
 import { TOTAL } from "../carted";
-import "./cart.css";
-
-// import { Button } from "@mui/material";
 export const CartPage = () => {
   let dispatch = useDispatch();
   let items = useSelector((state) => state.cart.cartSlice.items);
   const navigate = useNavigate();
-  // const remove = (item) => {
-  //   dispatch(removeItem(item));
-  // };
   const viewProduct = () => {
     navigate("/");
     window.location.reload(true);
@@ -33,25 +28,54 @@ export const CartPage = () => {
     navigate("/");
   };
   return (
-    <>
-      <h1>SHOPING CART </h1>
+    <Box>
+      <Typography
+        variant="h1"
+        align="center"
+        sx={{ fontSize: { xs: "50px", sm: "70px" } }}
+      >
+        SHOPING CART
+      </Typography>
       {items.length === 0 ? (
-        <div className="empty">
-          <img
-            src="https://images.meesho.com/images/pow/empty-cart.png"
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
+          <CardMedia
+            component="img"
+            image="https://images.meesho.com/images/pow/empty-cart.png"
             alt=""
+            // height="600px"
+            sx={{ width: "50%", m: "auto" }}
           />
-          <p>Your card is Empty </p>
-          <button onClick={viewProduct}>View Product</button>
-        </div>
+          <Typography variant="h4" align="center">
+            Your card is Empty
+          </Typography>
+          <Button
+            onClick={viewProduct}
+            variant="standard"
+            sx={{ width: "20%", ml: "40%" }}
+          >
+            View Product
+          </Button>
+        </Box>
       ) : (
-        <div className="carted-main">
-          <button onClick={addMore}>Add moreProduct</button>
-          {items.map((item, index) => {
-            return (
-              <>
-                <div className="carted-main1">
-                  <div>
+        <Box>
+          <Button onClick={addMore} variant="outlined">
+            Add moreProduct
+          </Button>
+          <Box>
+            <Grid
+              container
+              spacing={2}
+              sx={{ gap: 3, marginTop: 2, justifyContent: "center" }}
+            >
+              {items.map((item, index) => {
+                return (
+                  <>
                     <Carted
                       id={item.id}
                       brand={item.brand}
@@ -62,22 +86,28 @@ export const CartPage = () => {
                       quantity={item.quantity}
                       index={index}
                     />
-                  </div>
-                </div>
-              </>
-            );
-          })}
-
-          <div className="totals">
-            <Button onClick={cleardata} >
+                  </>
+                );
+              })}
+            </Grid>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+            }}
+          >
+            <Button onClick={cleardata} sx={{ color: "#e44c4c" }}>
               <DeleteIcon />
               ClearDATA
             </Button>
-            <TOTAL className="totalamount" />
-          </div>
-          <Button onClick={payment}>Payment</Button>
-        </div>
+            <TOTAL />
+          </Box>
+          <Button onClick={payment} variant="outlined">
+            Payment
+          </Button>
+        </Box>
       )}
-    </>
+      <Footer />
+    </Box>
   );
 };

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { toFormData } from "axios";
 import { combineReducers } from "redux";
 const productsSlice = createSlice({
   name: "products",
@@ -65,23 +64,12 @@ const cartSlice = createSlice({
     },
   },
 });
-// const counterSlice = createSlice({
-//   name: "counter",
-//   initialState: 0,
-//   reducers: {
-//     increment: (state) => state + 1,
-//     decrement: (state) => state - 1,
-//   },
-// });
 export const { addProducts, setLoading, setError, setserachItem } =
   productsSlice.actions;
 export const { addItem, removeItem, clearItem, decrease, increase } =
   cartSlice.actions;
-// export const { increment, decrement } = counterSlice.actions;
-// export default productsSlice.reducer;
 const reducer = combineReducers({
   productsSlice: productsSlice.reducer,
   cartSlice: cartSlice.reducer,
-  // counterSlice: counterSlice.reducer,
 });
 export default reducer;

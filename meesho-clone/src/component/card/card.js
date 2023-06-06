@@ -1,34 +1,27 @@
 import "./card.css";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-// import Button from '@mui/material/Button';
-// import Divider from "@mui/material/Divider";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { styled } from "@mui/system";
 import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
 import Rating from "@mui/material/Rating";
-// import Stack from "@mui/material/Stack";
 import { useTheme } from "@mui/material/styles";
 import { Image } from "mui-image";
 import { useDispatch, useSelector } from "react-redux";
 import { addProducts, setLoading } from "../../features/cartslice";
 import { addItem } from "../../features/cartslice";
-import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import { purple } from "@mui/material/colors";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Card, CardMedia, Container, Grid } from "@mui/material";
 export const Cards = () => {
   const theme = useTheme();
-  // let items = useSelector((state) => state.cart.productsSlice.data);
   const filterData = useSelector((state) => state.cart.productsSlice.serach);
-  console.log(filterData);
-  // const {search}=useSelector((state)=>)
-  // console.log(search)
+  // console.log(filterData);
   const dispatch = useDispatch();
   const [sorting, setSorting] = useState("1");
   useEffect(() => {
@@ -43,6 +36,7 @@ export const Cards = () => {
     });
   }, [dispatch]);
   const handelChange = (e) => {
+    // console.log(e.target.value);
     setSorting(e.target.value);
   };
   const addtocart = (data) => {
@@ -50,19 +44,22 @@ export const Cards = () => {
 
     toast("item to cart susscessfully", {
       position: "bottom-left",
+      theme: "light",
+      progress: undefined,
     });
   };
   const DataSorted = [...filterData].sort((a, b) => {
+    // console.log(sorting);
     if (sorting === "1") {
       return b.price - a.price;
     } else if (sorting === "2") {
       return a.price - b.price;
     } else if (sorting === "3") {
-      return b.rating - a.rating;
-    } else if (sorting === "4") {
-      return b.discount - a.discount;
-    } else {
       return a.id - b.id;
+    } else if (sorting === "4") {
+      return a.rating - b.rating;
+    } else {
+      return b.discount - a.discount;
     }
   });
   const ColorButton = styled(Button)(({ theme }) => ({
@@ -71,739 +68,628 @@ export const Cards = () => {
   }));
   return (
     <>
-      <Box
-        // className="card1"
-        sx={{
-          display: "flex",
-          flexDirection: {
-            xs: "column",
-            sm: "row",
-            md: "row",
-            lg: "row",
-            xl: "row",
-          },
-          height: { xs: 600, sm: 300, md: 350, lg: 250, xl: 250 },
-          width: { xs: "95%", sm: "90%", md: "90%", lg: "90%", xl: "90%" },
-          m: "auto",
-          justifyContent: "space-evenly",
-          bgcolor: "rgb(249,249,249)",
-          // border: 1,
-          mt: { xs: "22%", sm: "19%", md: "10%", lg: 3, xl: 3 },
-        }}
-      >
+      <Container component="main">
         <Box
-          sx={{
-            width: { xs: "95%", sm: "35%", md: "40%", lg: "45%", xl: "50%" },
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            fontFamily: theme.typography.fontFamily[2],
-            // border: 1,
-          }}
+          // component="main"
+          sx={{ mt: { xs: 6, sm: 0 }, alignItems: "center" }}
         >
-          <Typography
-            variant="h2"
-            fontSize={{
-              xs: 35,
-              sm: 25,
-              md: theme.typography.heading.fontSize,
-              lg: theme.typography.heading.fontSize,
-              xl: theme.typography.heading.fontSize,
-            }}
-            fontWeight={"bold"}
-          >
-            Lowest Prices Best Quality Shopping
-          </Typography>
-          <Box
+          <Grid
+            container
+            justifyContent="center"
+            alignItems="center"
             sx={{
-              display: "flex",
-              fontSize: {
-                xs: 18,
-                sm: 13,
-                md: theme.typography.para.fontSize,
-              },
-              justifyContent: "space-between",
-              // border:1,
-              width: "90%",
-              mt: 2,
+              backgroundColor: "#F9F9F9",
+              p: 2,
+              // gap:.5
             }}
           >
-            <p>Free Delivery</p>
-            <p>Cash On Delivery</p>
-            <p>Easy to Return </p>
-          </Box>
-          <Button
-            variant="contained"
-            style={{
-              borderRadius: 10,
-              backgroundColor: "rgb(244, 51,151)",
-              color: theme.palette.primary.main,
-            }}
-          >
-            Download the Meesho App
-          </Button>
+            <Grid
+              item
+              xs={12}
+              sm={5}
+              md={5}
+              lg={4}
+              xl={4}
+              sx={{ pt: 5, pr: 2 }}
+            >
+              <Typography variant="h3" sx={{ pt: 5 }}>
+                Lowest Prices Best Quality Shopping
+              </Typography>
+              <Grid
+                container
+                justifyContent="space-between"
+                backgroundColor="#ffffff"
+                sx={{ mt: 3 }}
+              >
+                <Grid item xs={4}>
+                  <img
+                    src="https://images.meesho.com/images/pow/freeDelivery.svg"
+                    style={{ marginRight: 5 }}
+                    alt=""
+                  />
+                  <span> Free Delivery</span>
+                </Grid>
+                <Grid item xs={4}>
+                  <img
+                    src="https://images.meesho.com/images/pow/cod.svg"
+                    style={{ marginRight: 3 }}
+                    alt=""
+                  />
+                  <Typography variant="p">Cash On Delivery</Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  <img
+                    src="https://images.meesho.com/images/pow/easyReturns.svg"
+                    style={{ marginRight: 3 }}
+                    alt=""
+                  />
+                  <span>Easy to Return</span>
+                </Grid>
+              </Grid>
+              <Button variant="standard" sx={{ mt: 5 }}>
+                Download the Meesho App
+              </Button>
+            </Grid>
+            <Grid xs={12} sm={7} lg={8} sx={{ pt: 5 }}>
+              <Image
+                src="https://images.meesho.com/images/marketing/1678691617864.webp"
+                // height="95%"
+              />
+            </Grid>
+          </Grid>
         </Box>
-        <Container>
-          <Image
-            src="https://images.meesho.com/images/marketing/1678691617864.webp"
-            width={"100%"}
-            // height="95%"
-          />
-        </Container>
-      </Box>
-      <Typography
-        variant="h2"
-        align="center"
-        width="90%"
-        fontSize={{
-          xs: 14,
-          sm: 20,
-          md: theme.typography.heading.fontSize,
-          lg: theme.typography.heading.fontSize,
-          xl: theme.typography.heading.fontSize,
-        }}
-        mt={5}
-      >
-        Top Categories to choose from
-      </Typography>
-      <Box
-        // className="card2"
-        sx={{
-          width: { xs: "95%", sm: "90%", md: "90%", lg: "90%", xl: "90%" },
-          display: "flex",
-          flexDirection: {
-            xs: "column",
-            sm: "column",
-            md: "row",
-            lg: "row",
-            xl: "row",
-          },
-          height: { xs: 550, sm: 550, md: 400, lg: 400, xl: 400 },
-          m: "auto",
-          mt: 10,
-          backgroundImage: `url("https://images.meesho.com/images/marketing/1678691670429.jpg")`,
-        }}
-      >
-        <Box
-          mt={0.5}
-          sx={{
-            // border: 1,
-            height: { xs: 200, sm: 250, md: 450, lg: 200, xl: 200 },
-            ml: { xs: 1, sm: 5, md: 3, lg: 3, xl: 2 },
-            width: { xs: "95%", sm: "70%", md: "33%", lg: "33%", xl: "33%" },
-          }}
-        >
-          <img
-            width={"100%"}
-            height="90%"
-            src="https://images.meesho.com/images/marketing/1678691686252.webp"
-            alt=""
-          />
-        </Box>
+        <Typography variant="h3" align="center" mt={5}>
+          Top Categories to choose from
+        </Typography>
         <Box
           sx={{
-            display: "flex",
-            flexDirection: {
-              xs: "row",
-              sm: "row",
-              md: "row",
-              lg: "row",
-              xl: "row",
+            width: "100%",
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "flex",
+              lg: "flex",
+              xl: "flex",
             },
-            // border:1,
-            justifyContent: "space-evenly",
-            width: { xs: "95%", sm: "90%", md: "60%", lg: "60%", xl: "60%" },
-            height: { xs: "50%", sm: 200, md: 250, lg: 250, xl: 250 },
-            ml: { xs: 1, sm: 5, md: 2, lg: 2, xl: 2 },
-            mt: { xs: 2, sm: 2, md: 20, lg: 20, xl: 20 },
+            // flexDirection: theme.flexDirection,
+            height: 500,
+            mt: 5,
+            backgroundImage: `url("https://images.meesho.com/images/marketing/1678691670429.jpg")`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            cursor: "pointer",
+            overflow: "auto",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-          <img
-            width={"45%"}
-            height={"90%"}
-            src="https://images.meesho.com/images/marketing/1678691699680.webp"
-            alt=""
-          />
-          <img
-            width={"45%"}
-            height={"90%"}
-            className="card2-image2"
-            src="https://images.meesho.com/images/marketing/1678691712594.webp"
-            alt=""
-          />
-        </Box>
-      </Box>
-      <Box
-        // className="card3"
-        sx={{
-          display: "flex",
-          flexDirection: {
-            xs: "column",
-            sm: "column",
-            md: "row",
-            lg: "row",
-            xl: "row",
-          },
-          width: "90%",
-          backgroundImage: {
-            xs: `url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000")`,
-            sm: `url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000")`,
-            md: `url("https://images.meesho.com/images/marketing/1678691743015.jpg")`,
-          },
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          m: "auto",
-          height: { xs: 950, sm: 850, md: 400, lg: 400, xl: 400 },
-          mt: { xs: 5, sm: 5, md: 15, lg: 5, xl: 5 },
-          justifyContent: "space-evenly",
-          // border: 1,
-        }}
-      >
-        <Box
-          sx={{
-            width: { xs: "80%", sm: "80%", md: "20%", lg: "20%", xl: "20%" },
-            mt: { xs: 5, sm: 5, md: 25, lg: 15, xl: 15 },
-            // border: 1,
-          }}
-        >
-          <Button
-            variant="contained"
-            style={{
-              borderRadius: 10,
-              backgroundColor: "rgb(244, 51,151)",
-              height: "20px",
-              width: "90%",
-              padding: "20px",
-            }}
-          >
-            View All
-          </Button>
-        </Box>
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "150,150",
-              sm: "150px 150px",
-              md: "150px 150px 150px",
-              lg: "150px 150px 150px",
-              xl: "150px 150px 150px",
-            },
-            width: { xs: "90%", sm: "70%", md: "80%", lg: "80%", xl: "80%" },
-            gap: 5,
-            mt: { xs: 5, sm: 5, md: 10 },
-            ml: { xs: 5, sm: 5, md: 25 },
-            // border: 1,
-          }}
-        >
-          <Box
+          <Container
             sx={{
-              width: {
-                xs: 130,
-                sm: 140,
-                md: 130,
-                lg: 400,
-                xl: 500,
-              },
-              // mt: {xs:5,sm:5,md:5},
-              height: 220,
               // border: 1,
-              display: "flex",
-              flexDirection: "column",
-              // justifyContent: "space-between",
-              ml: { xs: 5, sm: 5, md: 0, lg: 0, xl: 0 },
+              height: { md: 400, lg: 350, xl: 350 },
+              width: { xs: "100%", sm: "62%", md: "39%", lg: "35%", xl: "35%" },
+              mt: 5,
             }}
           >
             <Image
-              src="https://images.meesho.com/images/marketing/1678691846068.webp"
-              height={"80%"}
-              width={"90%"}
-            />
-            <Button
-              style={{
-                borderRadius: 10,
-                backgroundColor: "black",
-                height: "30px",
-                padding: "10px",
-                width: "95%",
-                color: "white",
-              }}
-            >
-              Home Decor
-            </Button>
-          </Box>
-          <Box
-            sx={{
-              height: 220,
-              width: {
-                xs: 130,
-                sm: 130,
-                md: 130,
-                lg: 130,
-                xl: 130,
-              },
-              ml: { xs: 5, sm: 5, md: 0, lg: 0, xl: 0 },
-              display: "flex",
-              flexDirection: "column",
-              // justifyContent: "space-around",
-            }}
-          >
-            <Image
-              width={"100%"}
-              height={"80%"}
-              src="https://images.meesho.com/images/marketing/1678691832099.webp"
-            />
-            <Button
-              variant="contined"
-              style={{
-                borderRadius: 10,
-                backgroundColor: "black",
-                height: "40px",
-                padding: "10px",
-                width: "95%",
-                color: "white",
-              }}
-            >
-              Kitchen Appliances
-            </Button>
-          </Box>
-          <Box
-            sx={{
-              height: 260,
-              width: {
-                xs: 130,
-                sm: 130,
-                md: 130,
-                lg: 130,
-                xl: 130,
-              },
-              ml: { xs: 5, sm: 5, md: 0, lg: 0, xl: 0 },
-              display: "flex",
-              flexDirection: "column",
-              // justifyContent: "space-between",
-            }}
-          >
-            <Image
-              width={"90%"}
-              height={"70%"}
-              src="https://images.meesho.com/images/marketing/1678691796046.webp"
-            />
-            <Button
-              variant="contined"
-              style={{
-                borderRadius: 10,
-                backgroundColor: "black",
-                height: "30px",
-                padding: "10px",
-                width: "90%",
-                color: "white",
-              }}
-            >
-              Health Care
-            </Button>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        // className="card4"
-        sx={{
-          display: "flex",
-          flexDirection: {
-            xs: "column",
-            sm: "column",
-            md: "row",
-            lg: "row",
-            xl: "row",
-          },
-          backgroundImage: {
-            xs: `url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=400")`,
-            sm: `url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=400")`,
-            md: `url("https://images.meesho.com/images/marketing/1678691892265.jpg")`,
-          },
-          width: "90%",
-          height: { xs: 900, sm: 800, md: 400, lg: 400, xl: 400 },
-          m: "auto",
-          backgroundSize: "cover",
-          mt: 5,
-          // border: 1,
-        }}
-      >
-        <Box
-          sx={{
-            width: { xs: "90%", sm: "90%", md: "30%", lg: "30%", xl: "30%" },
-            mt: { xs: 3, sm: 5, md: 15, lg: 15, xl: 15 },
-            ml: { xs: 5, sm: 2, md: 0 },
-          }}
-        >
-          <Button
-            variant="contained"
-            style={{
-              borderRadius: 10,
-              backgroundColor: "rgb(244, 51,151)",
-              height: "20px",
-              marginTop: "5%",
-              width: "60%",
-              padding: "20px",
-            }}
-          >
-            View All
-          </Button>
-        </Box>
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "100px 100px",
-              sm: "150px 150px",
-              md: "180px 180px 180px",
-              lg: "150px 150px 150px",
-              xl: "150px 150px 150px",
-            },
-            gap: 5,
-            width: { xs: "90%", sm: "90%", md: "60%", lg: "60%", xl: "60%" },
-            height: 220,
-            mt: { xs: 12, sm: 5, md: 5 },
-            ml: { xs: 0, sm: 4, md: 10 },
-            // border:1
-          }}
-        >
-          <Box
-            sx={{
-              width: {
-                xs: 130,
-                sm: 130,
-                md: 130,
-                lg: 400,
-                xl: 500,
-              },
-              height: 220,
-              // ml: { xs: 5, sm: 5, md: 0, lg: 0, xl: 0 },
-            }}
-          >
-            <Image src="https://images.meesho.com/images/marketing/1678691960553.webp" />
-            <Button
-              variant="contained"
-              style={{
-                borderRadius: 10,
-                backgroundColor: "black",
-                height: "20px",
-                padding: "10px",
-                width: "130px",
-                color: "white",
-              }}
-            >
-              Accessories
-            </Button>
-          </Box>
-          <Box
-            sx={{
-              width: {
-                xs: 130,
-                sm: 130,
-                md: 130,
-                lg: 400,
-                xl: 500,
-              },
-              height: 220,
-              // ml: { xs: 5, sm: 5, md: 0, lg: 0, xl: 0 },
-            }}
-          >
-            <Image src="https://images.meesho.com/images/marketing/1678691936892.webp" />
-            <Button
-              variant="contained"
-              style={{
-                borderRadius: 10,
-                backgroundColor: "black",
-                height: "20px",
-                padding: "10px",
-                width: "130px",
-                color: "white",
-              }}
-            >
-              Footwear
-            </Button>
-          </Box>
-          <Box
-            sx={{
-              width: {
-                xs: 130,
-                sm: 130,
-                md: 130,
-                lg: 400,
-                xl: 500,
-              },
-              height: 220,
-              // mt: { xs: 5, sm: 5, md: 0, lg: 0, xl: 0 },
-              // ml: { xs: 5, sm: 5, md: 0, lg: 0, xl: 0 },
-            }}
-          >
-            <Image
-              src="https://images.meesho.com/images/marketing/1678691925419.webp"
+              src="https://images.meesho.com/images/marketing/1678691686252.webp"
               alt=""
             />
-            <Button
-              variant="contained"
-              style={{
-                borderRadius: 10,
-                backgroundColor: "black",
-                height: "20px",
-                padding: "10px",
-                width: "130px",
-                color: "white",
+          </Container>
+          <Container
+            sx={{
+              display: "flex",
+              flexDirection: theme.flexDirection,
+              // border: "1px solid blue",
+              width: {
+                md: "60%",
+                lg: "70%",
+                xl: "70%",
+              },
+              height: { md: 300, lg: 350, xl: 350 },
+              mt: { md: 22, lg: 22, xl: 22 },
+            }}
+          >
+            <Image
+              src="https://images.meesho.com/images/marketing/1678691699680_300.webp"
+              alt=""
+            />
+            <Image
+              src="https://images.meesho.com/images/marketing/1678691712594_300.webp"
+              alt=""
+            />
+          </Container>
+        </Box>
+        <Grid
+          container
+          // className="card3"
+
+          sx={{
+            backgroundImage: {
+              xs: `url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000")`,
+              sm: `url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000")`,
+              md: `url("https://images.meesho.com/images/marketing/1678691743015.jpg")`,
+            },
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            height: { xs: "160em", sm: "100em", md: "550px" },
+            mt: 5,
+            justifyContent: "center",
+            alignItems: "center",
+            // border: 1,
+          }}
+        >
+          <Grid
+            item
+            justifyContent="center"
+            alignItem="center"
+            xs={6}
+            md={2}
+            sx={{ order: { xs: 2, sm: 2, md: 1 } }}
+          >
+            <Button variant="standard">View All</Button>
+          </Grid>
+          <Grid
+            xs={12}
+            sm={12}
+            md={9}
+            container
+            sx={{
+              gap: 1,
+              // marginTop: 2,
+              justifyContent: { xs: "center", md: "end" },
+              // ml: { xs: 0, sm: 0, md: 10 },
+              // border: 1,
+              order: { xs: 1, sm: 1, md: 2 },
+            }}
+          >
+            <Grid item xs={10} md={3} sm={5} lg={4}>
+              <Image src="https://images.meesho.com/images/marketing/1678691846068.webp" />
+              <Button variant="contained">Home Decor</Button>
+            </Grid>
+            <Grid
+              item
+              xs={10}
+              md={3}
+              sm={5}
+              lg={4}
+              sx={{
+                mt: { xs: 7, sm: 0, md: 0, lg: 0, xl: 0 },
               }}
             >
-              Electronic
-            </Button>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        // class="card5"
-        sx={{
-          width: "90%",
-          height: 250,
-          backgroundImage: `url("https://images.meesho.com/images/pow/downloadBannerDesktop.webp")`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          m: "auto",
-          mt: 10,
-        }}
-      >
-        <Typography
-          variant="h4"
-          color="rgb(85, 133, 248)"
-          align="end"
-          fontSize={{ xs: 30, sm: 30, md: 30, lg: 35, xl: 35 }}
-        >
-          Become a Reseller and
-        </Typography>
-        <Typography
-          variant="h4"
-          color="rgb(244, 51,151)"
-          align="center"
-          fontSize={{ xs: 25, sm: 25, md: 35, lg: 45, xl: 45 }}
-          mt={{ xs: 2, sm: 10 }}
-          ml={{ xs: 15, sm: 15 }}
-          backgroundColor={{ xs: "black", sm: "black", md: "transparent" }}
-        >
-          Start your Online Bussiness <br></br>with Zero Investment
-        </Typography>
-      </Box>
-      <Box
-        sx={{
-          width: "90%",
-          height: 200,
-          backgroundImage: `url("https://images.meesho.com/images/pow/supplyBannerDesktop.webp")`,
-          m: "auto",
-          mt: 10,
-        }}
-      >
-        <Typography
-          variant="h4"
-          color="white"
-          align="start"
-          fontSize={{ xs: 15, sm: 18, md: 30, lg: 35, xl: 35 }}
-        >
-          Register as a Meesho Supplier
-        </Typography>
-        <Typography
-          variantMapping="p"
-          color="white"
-          align="start"
-          mt={1}
-          fontSize={{ xs: 12, sm: 15, md: 20, lg: 25, xl: 30 }}
-        >
-          Sell your products to crores of customers at 0% commision
-        </Typography>
-        <Box
+              <Image src="https://images.meesho.com/images/marketing/1678691832099.webp" />
+              <Button variant="contained">Kitchen Appliances</Button>
+            </Grid>
+            <Grid
+              item
+              xs={10}
+              md={3}
+              sm={6}
+              lg={4}
+              sx={{
+                mt: { xs: 7, sm: 7, md: 0, lg: 0, xl: 0 },
+              }}
+            >
+              <Image src="https://images.meesho.com/images/marketing/1678691796046.webp" />
+              <Button variant="contained">Health Care</Button>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
           sx={{
-            display: "flex",
-            mt: { xs: 3, sm: 5, md: 10, lg: 10, xl: 10 },
-            color: "white",
-            mx: { xs: 0, sm: 0, md: 5, lg: 15, xl: 15 },
-            justifyContent: "space-between",
-          }}
-        >
-          <Typography variantMapping="p">Grow your bussiness 10x</Typography>
-          <Typography variantMapping="p">Enjoy 100% Profit|</Typography>
-          <Typography variantMapping="p">Sell all over India</Typography>
-        </Box>
-      </Box>
-      <Box sx={{ width: "80%" }}>
-        <div className="Product-class">
-          <h2>Product For you </h2>
-        </div>
-      </Box>
-      <Box
-        // className="card7-countainer"
-        sx={{
-          display: "flex",
-          flexDirection: {
-            xs: "column",
-            sm: "column",
-            md: "row",
-            lg: "row",
-            xl: "row",
-          },
-          width: { xs: "90%", sm: "90%", md: "90%", lg: "90%", xl: "90%" },
-          ml: "5%",
-          // border: 1,
-          mt: 5,
-        }}
-      >
-        <Box
-          // className="card7-options"
-          sx={{
-            width: { xs: "90%", sm: "90%", md: "20%", lg: "20%", xl: "20%" },
-            borderRadius: 5,
-            // border: 1,
-            display: "flex",
-            flexDirection: {
-              xs: "row",
-              sm: "row",
-              md: "column",
-              lg: "column",
-              xl: "column",
+            backgroundImage: {
+              xs: `url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000")`,
+              sm: `url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000")`,
+              md: `url("https://images.meesho.com/images/marketing/1678691892265.jpg")`,
             },
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            mt: 5,
+            height: { xs: "160em", sm: "100em", md: "550px" },
+            justifyContent: "center",
+            alignItems: "center",
+            // overflow: "auto",
+            // border: 1,
           }}
         >
-          <Box sx={{ width: "90%", ml: 2, mt: 1, mb: 1 }}>
-            <select onChange={handelChange}>
-              <option value="1">High to Low</option>
-              <option value="2">Low to High</option>
-              <option value="3">Rating</option>
-              <option value="4">Discount</option>
-              <option value="5">ID</option>
-            </select>
-          </Box>
+          <Grid
+            item
+            xs={6}
+            md={2}
+            sx={{
+              justifyContent: "center",
+              order: { xs: 2, sm: 2, md: 1 },
+            }}
+          >
+            <Button variant="standard">View All</Button>
+          </Grid>
+          <Grid
+            xs={12}
+            md={9}
+            container
+            sx={{
+              gap: 1,
+              justifyContent: { xs: "center", md: "end" },
+              // border: 1,
+              marginTop: 2,
+              order: { xs: 1, sm: 1, md: 2 },
+            }}
+          >
+            <Grid item xs={10} md={3} sm={5} lg={4}>
+              <Image src="https://images.meesho.com/images/marketing/1678691960553.webp" />
+              <Button variant="contained">Accessories</Button>
+            </Grid>
+            <Grid
+              item
+              xs={10}
+              md={3}
+              sm={5}
+              lg={4}
+              sx={{
+                mt: { xs: 7, sm: 0, md: 0, lg: 0, xl: 0 },
+              }}
+            >
+              <Image src="https://images.meesho.com/images/marketing/1678691936892.webp" />
+              <Button variant="contained">Footwear</Button>
+            </Grid>
+            <Grid
+              item
+              xs={10}
+              md={3}
+              sm={5}
+              lg={4}
+              sx={{
+                mt: { xs: 7, sm: 7, md: 0, lg: 0, xl: 0 },
+              }}
+            >
+              <Image
+                src="https://images.meesho.com/images/marketing/1678691925419.webp"
+                alt=""
+              />
+              <Button variant="contained">Electronic</Button>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Box
+          sx={{
+            width: "100%",
+            // height: { xs: 300, sm: 550, md: 467 },
+            backgroundImage: `url("https://images.meesho.com/images/pow/downloadBannerDesktop.webp")`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+
+            mt: 5,
+            height: { xs: "300px", sm: "560px" },
+            justifyContent: "center",
+            alignItems: "center",
+            // border: 1,
+          }}
+        >
+          <Container sx={{ pt: { xs: 1, sm: 15, md: 15, lg: 15, xl: 15 } }}>
+            <Typography
+              variant="h4"
+              color="rgb(85, 133, 248)"
+              align="end"
+              fontSize={{ xs: 15, sm: 30, md: 35, lg: 35, xl: 35 }}
+              backgroundColor="transparent"
+              padding="20px 0px 0px 15px"
+              width={{ xs: "90%", sm: "100%", md: "70%" }}
+            >
+              Become a Reseller and
+            </Typography>
+            <Typography
+              variant="h4"
+              color="rgb(244, 51,151)"
+              align="end"
+              fontSize={{ xs: 15, sm: 25, md: 45, lg: 45, xl: 45 }}
+              fontWeight={"bold"}
+              // mt={{ xs: 2, sm: 10 }}
+              // ml={{ xs: 15, sm: 15 }}
+              width={"100%"}
+              backgroundColor={"transparent"}
+              // border={1}
+            >
+              Start your Online Bussiness <br></br>with Zero Investment
+            </Typography>
+          </Container>
           <Box
             sx={{
-              width: "90%",
-              fontSize: 15,
+              display: "flex",
+              justifyContent: "end",
+              flexDirection: { xs: "column", sm: "row" },
+              mt: { xs: 1, sm: 2, md: 5 },
+              alignItems: "end",
+              // width: { xs: "80%", sm: "85%", md: "90%", lg: "70%", xl: "70%" },
+              // border: 1,
+            }}
+          >
+            <Grid
+              container
+              justifyContent="center"
+              sx={{
+                gap: 2,
+                width: { xs: "80%", sm: "60%" },
+                mt: { xs: 8, sm: 0 },
+              }}
+            >
+              <Grid item xs={8} md={5}>
+                <Image src="https://images.meesho.com/images/pow/playstoreIcon_500.webp" />
+              </Grid>
+              <Grid item xs={8} md={5}>
+                <Image src="https://images.meesho.com/images/pow/appstoreIcon_500.webp" />
+              </Grid>
+            </Grid>
+          </Box>
+        </Box>
+        <Grid
+          container
+          sx={{
+            display: { xs: "none", sm: "block" },
+            // height: { xs: 300, sm: 200, md: 300 },
+            backgroundImage: `url("https://images.meesho.com/images/pow/supplyBannerDesktop.webp")`,
+            backgroundSize: { xs: "cover", sm: "cover", md: "cover" },
+            backgroundRepeat: "no-repeat",
+            // m: "auto",
+            mt: 5,
+            height: {
+              sm: "200px",
+              md: "300px",
+            },
+            justifyContent: "center",
+            alignItems: "center",
+            // border: "1px solid red",
+          }}
+        >
+          <Container
+            sx={{
+              padding: "45px 0px 0px 20px",
+              // border: "1px solid red",
             }}
           >
             <Typography
-              variant="h3"
-              fontSize={20}
-              sx={{ display: { xs: "none", sm: "none", md: "block" } }}
+              variant="h4"
+              color="white"
+              fontSize={{ xs: 15, sm: 18, md: 35, lg: 35, xl: 35 }}
+              fontWeight={"bold"}
             >
-              Filter
+              Register as a Meesho Supplier
             </Typography>
-            <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
-              <Typography variant="h2" fontSize={20}>
-                Categories: <ArrowDropDownIcon className="icon-tag-mui" />
-              </Typography>
+            <Typography
+              variantMapping="p"
+              color="white"
+              mt={1}
+              fontSize={{ xs: 12, sm: 15, md: 20, lg: 25, xl: 30 }}
+            >
+              Sell your products to crores of customers at 0% commision
+            </Typography>
 
-              <Typography variant="h2" fontSize={20}>
-                Gender: <ArrowDropDownIcon className="icon-tag-mui" />
-              </Typography>
-              <Typography variant="h2" fontSize={20}>
-                Fabric: <ArrowDropDownIcon className="icon-tag-mui" />
-              </Typography>
-              <Typography variant="h2" fontSize={20}>
-                Oxford:
-                <ArrowDropDownIcon className="icon-tag-mui" />
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
+            <Grid
+              container
+              sx={{
+                color: "white",
+                mt: { xs: 3, sm: 5, md: 5, lg: 10, xl: 10 },
+              }}
+            >
+              <Grid item xs={4}>
+                Grow your bussiness 10x
+              </Grid>
+              <Grid item xs={4}>
+                Enjoy 100% Profit|
+              </Grid>
+              <Grid item xs={4}>
+                Sell all over India
+              </Grid>
+            </Grid>
+          </Container>
+        </Grid>
+
+        <Typography
+          variant="h2"
+          fontSize={theme.typography.heading}
+          alignContent="center"
+        >
+          Product For you
+        </Typography>
+
         <Box
-          // className="card7part"
           sx={{
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "200px",
-              sm: "200px 200px",
-              md: "200px 200px 200px",
-              lg: "170px 170px 170px",
-              xl: "150px 150px 150px 150px",
-            },
-            width: "90%",
-            ml: { xs: 5, sm: 0, md: 3, lg: 3, xl: 3 },
-            height: "100%",
-            cursor: "pointer",
-            // justifyContent: "space-evenly",
+            display: "flex",
+            flexDirection: theme.flexDirection,
             // border: 1,
-            gap: 2,
+            // justifyContent: "center",
+            // alignItems: "center",
+            mt: 5,
           }}
         >
-          {DataSorted.map((item) => {
-            return (
-              <>
-                <Box
+          <Box
+            sx={{
+              width: {
+                xs: "100%",
+                sm: "100%",
+                md: "20%",
+                lg: "20%",
+                xl: "20%",
+              },
+              // border: 1,
+              display: "flex",
+              flexDirection: theme.flexDirection1,
+            }}
+          >
+            <Box
+              sx={{
+                width: "90%",
+                ml: 2,
+                mt: 1,
+                mb: 1,
+              }}
+            >
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                label="Age"
+                onChange={handelChange}
+              >
+                <MenuItem value="1">High to Low</MenuItem>
+                <MenuItem value="2">Low to High</MenuItem>
+                <MenuItem value="3">ID</MenuItem>
+                <MenuItem value="4">Rating</MenuItem>
+                <MenuItem value="5">Discount</MenuItem>
+              </Select>
+            </Box>
+            <Box
+              sx={{
+                width: "100%",
+                fontSize: 15,
+              }}
+            >
+              <Typography
+                variant="h3"
+                fontSize={20}
+                sx={{ display: { xs: "none", sm: "none", md: "block" } }}
+              >
+                Filter
+              </Typography>
+              <Box
+                sx={{
+                  display: {
+                    xs: "none",
+                    sm: "none",
+                    md: "block",
+                  },
+                }}
+              >
+                <Typography
+                  variant="h2"
+                  fontSize={20}
                   sx={{
-                    // border: 1,
-                    mt: 2,
-                    alignItems: "center",
-                    borderRadius: 3,
                     display: "flex",
-                    flexDirection: "column",
                     justifyContent: "space-between",
-                    height: 320,
-                    textAlign: "center",
                   }}
                 >
-                  <img
-                    height="130px"
-                    width="90%"
-                    src={item.imageurl}
-                    alt=""
-                    className="img-card-display"
-                  />
+                  Categories:
+                  <ArrowDropDownIcon />
+                </Typography>
 
-                  <Typography
-                    gutterBottom
-                    variant="caption"
-                    component="div"
-                    sx={{
-                      textOverflow: "ellipsis",
-                      overflow: "hidden",
-                      whiteSpace: "nowrap",
-                      width: "60%",
-                    }}
-                  >
-                    TITLE:{item.description}
-                  </Typography>
-                  <Typography
-                    component="div"
-                    variant="caption"
-                    sx={{
-                      textOverflow: "ellipsis",
-                      overflow: "hidden",
-                      whiteSpace: "nowrap",
-                      width: "60%",
-                    }}
-
-                    // border="1px solid black"
-                  >
-                    Brand:{item.brand}
-                  </Typography>
-                  <Typography gutterBottom variant="caption" component="div">
-                    Price:{item.price}
-                  </Typography>
-                  <Typography gutterBottom variant="caption" component="div">
-                    Discount:{item.discount}%
-                  </Typography>
-                  <Typography gutterBottom variant="caption" component="div">
-                    <Rating name="no-value" value={item.rating} />
-                  </Typography>
-                  <Box textAlign="center">
-                    <ColorButton
-                      onClick={() => {
-                        addtocart(item);
+                <Typography
+                  variant="h2"
+                  fontSize={20}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  Gender: <ArrowDropDownIcon />
+                </Typography>
+                <Typography
+                  variant="h2"
+                  fontSize={20}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  Fabric: <ArrowDropDownIcon />
+                </Typography>
+                <Typography
+                  variant="h2"
+                  fontSize={20}
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  Oxford:
+                  <ArrowDropDownIcon />
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Grid justifyContent="center">
+            <Grid
+              container
+              spacing={2}
+              sx={{ gap: 1, justifyContent: "center" }}
+            >
+              {DataSorted.map((item) => {
+                return (
+                  <>
+                    <Box
+                      sx={{
+                        // border: 1,
+                        p: 2,
+                        mt: 2,
+                        alignItems: "center",
+                        borderRadius: 3,
+                        textAlign: "center",
                       }}
-                      variant="contained"
                     >
-                      Addtocart
-                    </ColorButton>
-                  </Box>
-                  <ToastContainer />
-                </Box>
-              </>
-            );
-          })}
+                      <Card style={{ width: "250px" }}>
+                        <Grid
+                          item
+                          key={item.id}
+                          xs={12}
+                          sm={12}
+                          md={12}
+                          sx={{ height: "500px", cursor: "pointer" }}
+                        >
+                          <CardMedia
+                            component="img"
+                            height="250px"
+                            image={item.imageurl}
+                            cursor="pointer"
+                          ></CardMedia>
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              textOverflow: "ellipsis",
+                              overflow: "hidden",
+                              whiteSpace: "nowrap",
+                              width: "100%",
+                              pl: 2,
+                            }}
+                          >
+                            {item.description}
+                          </Typography>
+                          <Typography
+                            sx={{
+                              textOverflow: "ellipsis",
+                              overflow: "hidden",
+                              whiteSpace: "nowrap",
+                              width: "100%",
+                              pl: 2,
+                            }}
+
+                            // border="1px solid black"
+                          >
+                            Brand:{item.brand}
+                          </Typography>
+                          <Typography>Rs.{item.price}</Typography>
+                          <Typography>Discount:{item.discount}%</Typography>
+                          <Typography>
+                            <Rating name="no-value" value={item.rating} />
+                          </Typography>
+                          <Box textAlign="center" mb="5px">
+                            <ColorButton
+                              onClick={() => {
+                                addtocart(item);
+                              }}
+                              variant="contained"
+                            >
+                              Addtocart
+                            </ColorButton>
+                          </Box>
+                          <ToastContainer />
+                        </Grid>
+                      </Card>
+                    </Box>
+                  </>
+                );
+              })}
+            </Grid>
+          </Grid>
         </Box>
-      </Box>
+      </Container>
     </>
   );
 };

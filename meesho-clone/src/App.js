@@ -11,26 +11,30 @@ import { Home } from "../src/component/Home/home";
 import { Profile } from "./component/Profile/profile";
 import { Sell } from "./component/supplier/supplierList/sell/sell";
 import { CartPage } from "./component/cart/cart";
+import { Product } from "./component/card/product";
+// import { Carted } from "./component/carted";
 // import { Design } from "../src/component/Home/design";
-import {Team} from "./component/Home/team";
+import PrimarySearchAppBar from "../src/component/Home/navbar";
+// import MyComponent from "./component/Home/imgar";
 function App() {
   return (
     <div className="App">
       {/* <Design /> */}
-      <Team/>
-      {/* <ThemeProvider theme={theme}>
-        <Grid container>
-             
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/supplier" element={<Supplier />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/sell" element={<Sell />} />
-              <Route path="/cart" element={<CartPage />} />
-            </Routes>
 
+      {/* <PrimarySearchAppBar>  */}
+      <ThemeProvider theme={theme}>
+        <Grid container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/supplier" element={<Supplier />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/sell" element={<Sell />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/product" element={<Product/>}/>
+          </Routes>
         </Grid>
-      </ThemeProvider> */}
+      </ThemeProvider>
+      {/* <PrimarySearchAppBar/> */}
     </div>
   );
 }

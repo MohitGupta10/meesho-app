@@ -1,7 +1,10 @@
-import "./cart/cart.css";
-// import { useState } from "react";
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import { useDispatch, useSelector } from "react-redux";
 import { increase, decrease, removeItem } from "../features/cartslice";
+import { Box, CardMedia } from "@mui/material";
+import Button from "@mui/material/Button";
 export const Carted = (props) => {
   const dispatch = useDispatch();
   let amount = props.price * props.quantity;
@@ -22,22 +25,49 @@ export const Carted = (props) => {
 
   return (
     <>
-      <div className="Carted">
-        <img src={props.img} alt="" />
-        <p>ID:{props.id}</p>
-        <p>Brand:{props.brand}</p>
-        <p>Price:{props.price}</p>
-        <p>Discount:{props.discount}%</p>
-        <p>QTY:{props.quantity}</p>
-        <button onClick={() => Add(props)}>+</button>
-        <button onClick={() => Sub(props)}>-</button>
-        <button onClick={() => remove(props.index)}>Remove</button>
-        <p>Subtotal:{totalsubtotal}</p>
-      </div>
+      <Box p={2}>
+        <Card
+          sx={{
+            m: { xs: "auto", sm: "auto" },
+            width: { xs: "250px", sm: "250", md: "250" },
+          }}
+        >
+          <Grid item key={props.id} xs={12} sm={12} md={12}>
+            <CardMedia
+              component="img"
+              height="250px"
+              image={props.img}
+            ></CardMedia>
+            <Typography
+              sx={{
+                textOverflow: "ellipsis",
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                width: "100%",
+              }}
+              align="center"
+            >
+              Brand:{props.brand}
+            </Typography>
+            <Typography align="center">Pice:{props.price}</Typography>
+            <Typography align="center">Discount:{props.discount}%</Typography>
+            <Typography align="center">QTY:{props.quantity}</Typography>
+            <Button onClick={() => Add(props)} sx={{ color: "black" }}>
+              Add
+            </Button>
+            <Button onClick={() => Sub(props)} sx={{ color: "black" }}>
+              Sub
+            </Button>
+            <Button onClick={() => remove(props.index)} sx={{ color: "black" }}>
+              Remove
+            </Button>
+            <Typography align="center">subTotal:{totalsubtotal}</Typography>
+          </Grid>
+        </Card>
+      </Box>
     </>
   );
 };
-
 export const TOTAL = () => {
   const items = useSelector((state) => state.cart.cartSlice.items);
   // console.log(items)
@@ -57,7 +87,7 @@ export const TOTAL = () => {
   getTotal();
   return (
     <>
-      <h2 className="total-amount">TOTAL:{totalamount}</h2>
+      <h2>TOTAL:{totalamount}</h2>
     </>
   );
 };
