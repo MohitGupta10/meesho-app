@@ -6,4 +6,8 @@ router.post("/product", ProductController.ProductCreate);
 
 router.get("/productlist", ProductController.ProductGetlist);
 
-module.exports=router
+router.patch("/productlist/:id", ProductController.ProductUpdate);
+
+router.post("/login", ProductController.LoginCreate);
+
+module.exports = router;

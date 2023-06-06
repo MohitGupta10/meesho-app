@@ -1,5 +1,3 @@
-// import "./profile.css";
-import validationSchema from "./profileschema";
 import { Navbar } from "../Navbar/Navbar";
 import { useState } from "react";
 import { Box } from "@mui/material";
@@ -24,7 +22,8 @@ export const Profile = () => {
     // console.log(user)
     if (mobileNo && password) {
       axios.post("http://localhost:5555/login", user).then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
+        alert(res.data.messsage);
       });
     }
   };
@@ -103,19 +102,20 @@ export const Profile = () => {
         </Box>
         <div>
           <Link to="/">
-          <button
-            onClick={handelClick}
-            style={{
-              marginTop: "15px",
-              width: "250px",
-              marginLeft: "45px",
-              color: "white",
-              backgroundColor: "#F43397",
-              padding: "10px",
-            }}
-          >
-            Continue
-          </button></Link>
+            <button
+              onClick={handelClick}
+              style={{
+                marginTop: "15px",
+                width: "250px",
+                marginLeft: "45px",
+                color: "white",
+                backgroundColor: "#F43397",
+                padding: "10px",
+              }}
+            >
+              Continue
+            </button>
+          </Link>
         </div>
       </Box>
     </>
